@@ -1,0 +1,1 @@
+import{w as e}from"./with-props-BMOtgW5C.js";import{o as t}from"./chunk-D4RADZKF-BXVSF3ox.js";function s({}){return[{title:"Freeports website"},{name:"description",content:"Welcome to Freeports website"}]}const i=e(function(){return t.jsx("p",{children:"Home text"})});export{i as default,s as meta};
