@@ -1,16 +1,16 @@
 import type { Route } from "./+types/home";
-// import { Header } from "../components/header";
+import Page from "../components/page";
 // import { Footer } from "../components/footer"
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Freeports website" },
+    { title: "Freeports contacts" },
     { name: "description", content: "Contact Freeports maintainers" },
   ];
 }
 
 export default function Contact_us() {
-  return <p>
+  return <Page>
       Contact us text
-    </p>;
+    </Page>;
 }
