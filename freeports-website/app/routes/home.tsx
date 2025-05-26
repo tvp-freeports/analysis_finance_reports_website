@@ -10,6 +10,17 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
+export function links() {
+  return [
+    {
+      rel: "icon",
+      href: "/assets/logo/icon.svg",
+      type: "image/svg",
+    },
+  ];
+}
+
+
 export default function Home() {
   return <Page>
     <p>

@@ -1,0 +1,19 @@
+
+Purple:
+  code: "#8f6dd6"
+  used:
+    logo: [background]
+    website: [header]
+Orange: 
+  code: "#ffab4a"
+  used:
+    logo: [iris]
+Red:
+  code: "#d33559"
+  used:
+    logo: [tongue,eye-detail]
+White:
+  code: "#fffef3"
+  used:
+    logo: [sclera,teeth,text]
+    website: [light-text]

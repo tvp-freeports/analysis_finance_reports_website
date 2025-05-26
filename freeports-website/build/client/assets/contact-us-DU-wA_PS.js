@@ -1,1 +1,0 @@
-import{w as t}from"./with-props-BMOtgW5C.js";import{o as n}from"./chunk-D4RADZKF-BXVSF3ox.js";function s({}){return[{title:"Freeports website"},{name:"description",content:"Contact Freeports maintainers"}]}const i=t(function(){return n.jsx("p",{children:"Contact us text"})});export{i as default,s as meta};
