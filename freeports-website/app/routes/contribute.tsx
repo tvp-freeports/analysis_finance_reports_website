@@ -1,20 +1,43 @@
-// import type { Route } from "./+types/home";
-// import { Header } from "../components/header";
+import type { Route } from "./+types/home";
+import Header from "../components/header";
+import Page from "../components/page";
 // import { Footer } from "../components/footer"
 
-// export function meta({}: Route.MetaArgs) {
-//   return [
-//     { title: "Freeports website" },
-//     { name: "description", content: "Welcome to Freeports website" },
-//   ];
-// }
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Freeports website" },
+    { name: "description", content: "Welcome to Freeports website" },
+  ];
+}
 
-// export default function Home() {
-//   return <>
-//   <Header/>
-//     <p>
-//       Home text
-//     </p>
-//   <Footer/>
-//   </>;
-// }
+export function links() {
+  return [
+    {
+      rel: "icon",
+      href: "/assets/logo/icon.svg",
+      type: "image/svg",
+    },
+  ];
+}
+
+
+export default function Home() {
+  return <Page>
+    <section>
+      <h2>
+        The ethic
+      </h2>
+      <p>
+        Home text
+      </p>
+    </section>
+    <section>
+      <h2>
+        How to contribute
+      </h2>
+      <p>
+        Home text
+      </p>
+    </section>
+  </Page>;
+}
