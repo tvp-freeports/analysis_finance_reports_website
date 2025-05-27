@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import Header from "../components/header";
 import Page from "../components/page";
-// import { Footer } from "../components/footer"
+import { Footer } from "../components/footer"
 
 export function meta({}: Route.MetaArgs) {
   return [
