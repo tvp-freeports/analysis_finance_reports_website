@@ -3,7 +3,7 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
+  --text-base: 1.3rem;
   --color-purple: #8f6dd6;
   --color-purple-drk: #512d9f;
   --color-orange: #ffab4a;
@@ -18,12 +18,39 @@
 html,
 body {
   @apply bg-white text-black dark:bg-gray-950 dark:text-white h-screen;
-
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
 }
 
+h1, h2 {
+  @apply font-bold text-xl sm:text-7xl;
+}
+
 body {
-  @apply flex flex-col;
+  @apply flex flex-col items-center gap-7 text-base sm:text-2xl;
+}
+
+.tongue {
+  @apply bg-red inset-shadow-sm inset-shadow-black/25 ;
+  
+}
+section {
+  @apply w-76/100 sm:w-6/10
+}
+
+.tongue-r {
+  @apply rounded-r-full;
+}
+
+.tongue-content{
+  @apply text-white text-shadow-md text-shadow-black/35;
+}
+
+.tongue-l {
+  @apply rounded-l-full;
+}
+
+.navigation-link-header {
+  @apply px-2 hover:text-orange hover:text-shadow-lg hover:text-shadow-purple-drk/70
 }

@@ -4,8 +4,8 @@ import ReactNode from "react";
 
 export default function Page({children}: {children: ReactNode}){
     return <>
-    <Header className="bg-purple text-white" />
-    <main className="flex-grow">
+    <Header />
+    <main className="flex-grow flex flex-col  gap-7">
         {children}
     </main>
     <Footer />

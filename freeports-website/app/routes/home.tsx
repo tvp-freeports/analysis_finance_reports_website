@@ -23,30 +23,31 @@ export function links() {
 
 export default function Home() {
   return <Page>
-    <section>
-      <h2>
-        The project
-      </h2>
-      <p>
-        Home text
-      </p>
-    </section>
-    <section>
-      <h2>
-        Entropy is obfuscation
-      </h2>
-      <p>
-        Home text
-      </p>
-    </section>
-    <section>
-      <h2>
-        <em>You</em>, is exactly what we need...
-      </h2>
-      <p>
-        Home text
-      </p>
-    </section>
-  
+      <section>
+        <h2>
+          The project
+        </h2>
+        <p>
+          Home text
+        </p>
+      </section>
+        <div className="tongue tongue-r w-30 h-30">
+        </div>
+        <section className="tongue-content">
+          <h2>
+            Entropy is obfuscation
+          </h2>
+          <p>
+            Home text
+          </p>
+        </section>
+      <section>
+        <h2>
+          <em>You</em>, is exactly what we need...
+        </h2>
+        <p>
+          Home text
+        </p>
+      </section>
   </Page>;
 }
