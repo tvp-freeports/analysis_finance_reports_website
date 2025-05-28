@@ -24,7 +24,7 @@ body {
 }
 
 h1, h2 {
-  @apply font-bold text-xl sm:text-7xl;
+  @apply font-bold text-3xl sm:text-7xl;
 }
 
 body {
@@ -32,25 +32,46 @@ body {
 }
 
 .tongue {
-  @apply bg-red inset-shadow-sm inset-shadow-black/25 ;
+  @apply  h-full overflow-visible;
+  @apply bg-red inset-shadow-sm inset-shadow-black/25 z-0;
   
 }
+p {
+  @apply text-justify;
+}
 section {
-  @apply w-76/100 sm:w-6/10
+  @apply  col-start-2 col-span-3;
+  @apply  flex flex-col gap-8 ;
 }
 
-.tongue-r {
-  @apply rounded-r-full;
+.tongue-r { 
+  @apply col-1 w-[95vw] lg:w-[88vw];
+  @apply rounded-r-4xl lg:rounded-r-full;
 }
 
 .tongue-content{
-  @apply text-white text-shadow-md text-shadow-black/35;
+  @apply text-white text-shadow-md text-shadow-black/35 z-10 py-5;
 }
 
 .tongue-l {
-  @apply rounded-l-full;
+  @apply col-1 w-screen ml-[7vw];
+  @apply rounded-4xl lg:rounded-l-full;
 }
 
 .navigation-link-header {
+  @apply text-white text-shadow-lg text-shadow-purple-drk/40 text-sm sm:text-base;
   @apply px-2 hover:text-orange hover:text-shadow-lg hover:text-shadow-purple-drk/70
+}
+.navigation-link-footer {
+  @apply hidden sm:inline;
+  @apply text-orange bg-red md:px-8 py-3;
+  @apply hover:bg-orange hover:text-red hover:text-shadow-lg hover:text-shadow-black/10;
+  @apply border-4 rounded-4xl  border-red shadow-lg;
+}
+
+
+.header-footer {
+  @apply font-bold uppercase;
+  @apply sm:rounded-3xl rounded-t-4xl shadow-black sm:m-13 md:m-16 lg:m-20 w-full sm:w-9/10;
+  @apply p-9;
 }

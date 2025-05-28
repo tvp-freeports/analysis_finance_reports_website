@@ -5,7 +5,7 @@ import ReactNode from "react";
 export default function Page({children}: {children: ReactNode}){
     return <>
     <Header />
-    <main className="flex-grow flex flex-col  gap-7">
+    <main className="flow-grow grid grid-cols-5 gap-10 items-center w-full">
         {children}
     </main>
     <Footer />
