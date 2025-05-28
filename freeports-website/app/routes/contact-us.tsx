@@ -27,7 +27,7 @@ export default function Contact_us() {
                 <p className="flex-grow">Tel: </p> <a className="lg:w-3/10 hover:text-purple-drk active:text-purple overflow-scroll" href="tel:+39123456789">+39 123456789</a>
             </li>
             <li className="flex flex-row gap-9">
-                <p className="flex-grow">Telegram: </p> <a className="lg:w-3/10 hover:text-purple-drk active:text-purple overflow-scroll" href="https://t.me/freeports">@freeports</a>
+                <p className="flex-grow">Telegram: </p> <a className="lg:w-3/10 hover:text-purple-drk active:text-purple overflow-scroll" href="https://t.me/TheFreeportsProject">@TheFreeportsProject</a>
             </li>
           </ul>
         </address>

@@ -28,7 +28,7 @@ export default function Home() {
         We think that the success of <em>Freeports</em> <span className="underline">is</span> and <span className="underline">should be</span> binded
         with the health and success of his community. For this reason we empathize the importance
         of the humans interactions and exchange. We hope to facilitate it providing a <strong>
-          <a href="https://t.me/CHANGEME">telegram group</a>
+          <a href="https://t.me/TheFreeportsProject">telegram group</a>
         </strong> and our <strong>
           <a href="https://discord.gg/FRcSBWtcDR">discord group</a>
         </strong>. Feel free to use the tool that you like the most but consider that for organization
