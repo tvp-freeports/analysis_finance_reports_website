@@ -10,6 +10,13 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
+export const links: Route.LinksFunction = () => [
+  {
+    rel: "icon",
+    href: "assets/logo/icon.svg",
+  },
+];
+
 
 export default function Contribute() {
   return <Page>
@@ -47,7 +54,7 @@ export default function Contribute() {
         We know that everyone is a different book with a unique story and potential to help the community around this project;
         for this reason we encourage you to contact us by email or in the way that you like the most in order to resolve any
         doubt about the project in general or about how to actively contribute to it. We are trying to include in the 
-        <strong> <a href="https://docs.freeports.org">project documentation</a></strong> at the <strong><a href="https://docs.freeports.org/contribute.html">contribute section</a></strong>
+        <strong> <a href="https://docs.freeports.org">project documentation</a></strong> at the <strong><a href="https://docs.freeports.org/contribute.html">contribute section </a></strong>
         a guide on how to do that in the most straight forward manner. The documentation is still a work in progress and all the project
         is a construction site, so feel free to ask for whatever doubt or to point out whatever you feel is relevant and/or interesting.
       </p>

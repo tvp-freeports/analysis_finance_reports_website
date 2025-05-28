@@ -8,6 +8,12 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
+export const links: Route.LinksFunction = () => [
+  {
+    rel: "icon",
+    href: "assets/logo/icon.svg",
+  },
+];
 
 
 export default function Home() {

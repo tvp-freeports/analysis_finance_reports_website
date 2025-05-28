@@ -8,6 +8,12 @@ export function meta({}: Route.MetaArgs) {
     { name: "description", content: "Contact Freeports maintainers" },
   ];
 }
+export const links: Route.LinksFunction = () => [
+  {
+    rel: "icon",
+    href: "assets/logo/icon.svg",
+  },
+];
 
 export default function Contact_us() {
   return <Page>

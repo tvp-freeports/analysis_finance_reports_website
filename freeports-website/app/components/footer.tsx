@@ -9,6 +9,7 @@ export default function Footer() {
     grid-cols-1
     sm:grid-cols-3
     items-center
+    overflow-visible
     ">
     <ul className="col-1 justify-center sm:justify-start flex flex-row gap-6 items-center">
         <li><a href="https://github.com/GVoreste/analysis_finance_reports"><img className="w-20" src="assets/github-logo/github-mark.svg"/></a></li>
