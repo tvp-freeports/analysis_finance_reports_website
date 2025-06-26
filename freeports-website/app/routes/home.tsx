@@ -23,7 +23,7 @@ export default function Home() {
           The project
         </h2>
         <p>
-          The aim of this project is to develop a tool capable of extract and aggregate data
+          The aim of this project is to develop a tool capable of extracting and aggregating data
           from public financial reports and export a <em>csv</em>. 
           The extracted information will be the ones that can be some ethical relevance or of 
           academic interest. Our purpose is to provide an easy way to retrieve information that 
