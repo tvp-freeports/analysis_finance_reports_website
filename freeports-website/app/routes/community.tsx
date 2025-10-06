@@ -46,7 +46,7 @@ export default function Home() {
         Giving this premise we acknowledge that collaborate is as effective and fulfilling
         as difficult and sometimes frustrating. For this reason we will try to facilitate
         the cooperative environment safeguarding it in the way that we think more adequate.
-        The specific rules are specified on our <strong><a href="https://github.com/GVoreste/analysis_finance_reports/blob/main/CODE_OF_CONDUCT.md">GitHub repository </a></strong>
+        The specific rules are specified on our <strong><a href="https://github.com/tvp-freeports/analysis_finance_reports/blob/main/CODE_OF_CONDUCT.md">GitHub repository </a></strong>
         (also this document like everything else is a work in progress). We reccomand to read it.
         These rules are subordinate to the imperative master rule of respect towards the other peoples.
         Unfortunately common sense is common just nominally but not factually; 
