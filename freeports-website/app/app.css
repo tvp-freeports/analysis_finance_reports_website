@@ -6,13 +6,11 @@
   --text-base: 1.3rem;
   --color-purple: #8f6dd6;
   --color-purple-drk: #512d9f;
-  --color-orange: #ffab4a;
-  --color-orange-drk: #eb7d00;
+  --color-orange: #f9be2d;
+  --color-orange-drk: #f9be2d;
   --color-white: #fffef3;
-  --color-red: #d33559;
+  --color-red: #fc3284; 
   --color-black: #000000;
-
-  
 }
 
 html,
