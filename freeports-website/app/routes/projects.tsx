@@ -8,9 +8,9 @@ const PROJECTS: Project[] = [
     id: "occupation",
     title: "Project 1 — Reports on the Israeli Occupation",
     shortDescription:
-      "Collect and analyze bank investments linked to the occupation. Collect and analyze bank investments linked to the occupation.",
+      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
     fullDescription:
-      "This project aggregates disclosures and regulatory filings across banks to map exposure. We parse PDFs, harmonize funds data, and produce reproducible analyses for journalists and researchers. This project aggregates disclosures and regulatory filings across banks to map exposure. We parse PDFs, harmonize funds data,",
+      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
     bgColor: "bg-[#fc3284]", // 🔴 soft red background
     textColor: "text-[var(--color-white)]",
     chapters: [
@@ -18,14 +18,14 @@ const PROJECTS: Project[] = [
         id: "it-banks",
         title: "Chapter 1: Italian financial institutions data",
         description:
-          "Parses bank reports and maps investments — includes methodology. Parses bank reports and maps investments — includes methodology.",
+          "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
         href: "/projects/occupation/chapters/it-banks",
       },
       {
         id: "dk-banks",
         title: "Chapter 2: Danish financial institutions data",
         description:
-          "Similar pipeline for Danish banks; special focus on subsidiaries. Similar pipeline for Danish banks; special focus on subsidiaries.Similar pipeline for Danish banks; special focus on subsidiaries.",
+          "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
         href: "/projects/occupation/chapters/dk-banks",
       },
     ],
@@ -34,9 +34,9 @@ const PROJECTS: Project[] = [
     id: "climate",
     title: "Project 2 — Reports on Climate Destruction",
     shortDescription:
-      "Track investments enabling deforestation and high-emissions projects.",
+      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
     fullDescription:
-      "We analyze funds and corporate disclosures to reveal how capital drives high-carbon activities.",
+      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
     bgColor: "bg-[#f9be2d]", // 🟡 soft yellow background
     textColor: "text-[var(--color-white)]",
     chapters: [
@@ -44,7 +44,7 @@ const PROJECTS: Project[] = [
         id: "emissions",
         title: "Chapter 1: Carbon emissions data",
         description:
-          "Dataset of emissions metrics and links to exposures.",
+          "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
         href: "/projects/climate/chapters/emissions",
       },
     ],
@@ -53,9 +53,9 @@ const PROJECTS: Project[] = [
     id: "climate",
     title: "Project 2 — Reports on Climate Destruction",
     shortDescription:
-      "Track investments enabling deforestation and high-emissions projects.",
+      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
     fullDescription:
-      "We analyze funds and corporate disclosures to reveal how capital drives high-carbon activities.",
+      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
     bgColor: "bg-[#d422ff]", // 🟣 soft purple background
     textColor: "text-[var(--color-white)]",
     chapters: [
@@ -63,7 +63,7 @@ const PROJECTS: Project[] = [
         id: "emissions",
         title: "Chapter 1: Carbon emissions data",
         description:
-          "Dataset of emissions metrics and links to exposures.",
+          "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
         href: "/projects/climate/chapters/emissions",
       },
     ],
@@ -95,7 +95,7 @@ export default function Projects() {
         className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8"
         /* col-span-full / col-start-1 override the global section grid placement */
       > 
-        <h1 className="text-3xl font-bold mb-3">Projects page under development</h1>
+        <h1 className="text-3xl font-bold mb-3">Projects page (under development)</h1>
         <p className="mt-2 text-gray-700 text-justify sm:text-center">
           Here you can explore the projects we are working on. Click a project
           to expand its description; then show chapters to explore the work
