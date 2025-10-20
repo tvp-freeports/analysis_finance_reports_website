@@ -17,7 +17,7 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-export default function Home() {
+export default function Community() {
   return <Page>
     <section>
       <h2>

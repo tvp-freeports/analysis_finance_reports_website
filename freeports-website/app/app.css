@@ -7,10 +7,10 @@
 
 
   --color-purple: #000000;
-  --color-purple-drk: #512d9f;
+  --color-purple-drk: #000000;
   --color-orange: #f9be2d;
-  --color-orange-drk: #f9be2d;
-  --color-white: #f0faffff;
+  --color-orange-drk: #000000;
+  --color-white: #f0faff;
   --color-red: #fc3284;
   --color-black: #000000;
 }
@@ -24,7 +24,15 @@ body {
 }
 
 h1, h2 {
-  @apply font-bold text-3xl sm:text-7xl;
+  @apply font-bold text-3xl sm:text-5xl;
+}
+
+h3 {
+  @apply font-bold text-3xl sm:text-4xl;
+}
+
+h4 {
+  @apply font-bold text-3xl sm:text-3xl;
 }
 
 body {

@@ -17,9 +17,9 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-
 export default function Contribute() {
   return <Page>
+    
     <div className="tongue-l tongue hidden sm:block">
     </div>
     <div className="w-screen tongue sm:hidden">
@@ -29,17 +29,8 @@ export default function Contribute() {
         The ethics
       </h2>
       <p>
-        Giving the ethic purpose of the project we sustain the keys points of the <strong><a href="https://www.gnu.org/philosophy/philosophy.html">free software philosophy</a></strong>. 
-        We are convinced that the personal freedom start from the free avalaibility of information and knowledge. 
-        This perspective is not innovative in the human history, but we add a remark about that:
-        we live in a world where in many cases the biggest obstacle to the knowledge is not the difficulty in finding information,
-        but many times the opposite! Every day data is produced and consumed by informative systems. 
-        Our ambiscous plan is to take the minimal omogenety imposed by the law in financial reports and try to exploit it to help the work of data aggregation and filtering
-        of economists and data-scientist (or in general people that need it) easier.<br/>
-        We want to do it trying to eliminate discriminatory factors in the fruition of data like economic disposal,
-        time disposal, direct and indirect racial, gender, religious, political, sexual orientation, age
-        discrimination. For doing so we think that the only recipe is a pragmatic approach.
-        Making the project fully open and independent.
+        Giving the ethic purpose of the project we sustain the keys points of the free software philosophy. We are convinced that the personal freedom start from the free avalaibility of information and knowledge. This perspective is not innovative in the human history, but we add a remark about that: we live in a world where in many cases the biggest obstacle to the knowledge is not the difficulty in finding information, but many times the opposite! Every day data is produced and consumed by informative systems. Our ambiscous plan is to take the minimal omogenety imposed by the law in financial reports and try to exploit it to help the work of data aggregation and filtering of economists and data-scientist (or in general people that need it) easier.
+We want to do it trying to eliminate discriminatory factors in the fruition of data like economic disposal, time disposal, direct and indirect racial, gender, religious, political, sexual orientation, age discrimination. For doing so we think that the only recipe is a pragmatic approach. Making the project fully open and independent.
       </p>
     </section>
     
