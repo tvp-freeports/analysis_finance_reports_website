@@ -8,35 +8,19 @@ const PROJECTS: Project[] = [
     id: "occupation",
     title: "Project 1 — Reports on the Israeli Occupation",
     shortDescription:
-      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
     fullDescription:
-      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis",
     bgColor: "bg-[#fc3284]", // 🔴 soft red background
     textColor: "text-[var(--color-white)]",
-    chapters: [
-      {
-        id: "it-banks",
-        title: "Chapter 1: Italian financial institutions data",
-        description:
-          "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
-        href: "/projects/occupation/chapters/it-banks",
-      },
-      {
-        id: "dk-banks",
-        title: "Chapter 2: Danish financial institutions data",
-        description:
-          "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
-        href: "/projects/occupation/chapters/dk-banks",
-      },
-    ],
   },
   {
     id: "climate",
     title: "Project 2 — Reports on Climate Destruction",
     shortDescription:
-      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
     fullDescription:
-      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis",
     bgColor: "bg-[#f9be2d]", // 🟡 soft yellow background
     textColor: "text-[var(--color-white)]",
     chapters: [
@@ -44,7 +28,7 @@ const PROJECTS: Project[] = [
         id: "emissions",
         title: "Chapter 1: Carbon emissions data",
         description:
-          "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
+          "Dataset of emissions metrics and links to exposures.",
         href: "/projects/climate/chapters/emissions",
       },
     ],
@@ -53,9 +37,9 @@ const PROJECTS: Project[] = [
     id: "climate",
     title: "Project 2 — Reports on Climate Destruction",
     shortDescription:
-      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
     fullDescription:
-      "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis",
     bgColor: "bg-[#d422ff]", // 🟣 soft purple background
     textColor: "text-[var(--color-white)]",
     chapters: [
@@ -63,7 +47,7 @@ const PROJECTS: Project[] = [
         id: "emissions",
         title: "Chapter 1: Carbon emissions data",
         description:
-          "texttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttexttexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttextexttexttext",
+          "Dataset of emissions metrics and links to exposures.",
         href: "/projects/climate/chapters/emissions",
       },
     ],
@@ -95,7 +79,7 @@ export default function Projects() {
         className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8"
         /* col-span-full / col-start-1 override the global section grid placement */
       > 
-        <h1 className="text-3xl font-bold mb-3">Projects page (under development)</h1>
+        <h1 className="text-3xl font-bold mb-3">Page under development</h1>
         <p className="mt-2 text-gray-700 text-justify sm:text-center">
           Here you can explore the projects we are working on. Click a project
           to expand its description; then show chapters to explore the work
