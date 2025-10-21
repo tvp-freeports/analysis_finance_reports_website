@@ -1,65 +1,46 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import { ProjectSection, type Project } from "../components/ProjectSection";
+import { ToolSection, type Tool } from "../components/ToolsSection"; // Assuming you'll create a ToolSection component similar to ProjectSection
 
 /** Example data with background colors */
-const PROJECTS: Project[] = [
+const TOOLS: Tool[] = [
   {
-    id: "occupation",
-    title: "Project 1 — Reports on the Israeli Occupation",
+    id: "tool-1",
+    title: "Tool 1 — Data Analysis Suite",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+      "Powerful data analysis tools to make sense of your datasets quickly and intuitively.",
     fullDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis",
-    bgColor: "bg-[#fc3284]", // 🔴 soft red background
-    textColor: "text-[var(--color-white)]",
+      "Our Data Analysis Suite helps you explore, visualize, and extract insights from data with ease. It supports multiple formats and includes advanced statistical features.",
+    bgColor: "bg-[#1e90ff]", // blue background
+    textColor: "text-white",
   },
   {
-    id: "climate",
-    title: "Project 2 — Reports on Climate Destruction",
+    id: "tool-2",
+    title: "Tool 2 — Climate Impact Calculator",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+      "Estimate the environmental impact of various activities and products.",
     fullDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis",
-    bgColor: "bg-[#f9be2d]", // 🟡 soft yellow background
-    textColor: "text-[var(--color-white)]",
-    chapters: [
-      {
-        id: "emissions",
-        title: "Chapter 1: Carbon emissions data",
-        description:
-          "Dataset of emissions metrics and links to exposures.",
-        href: "/projects/climate/chapters/emissions",
-      },
-    ],
+      "The Climate Impact Calculator lets you input various data points to calculate carbon footprints and helps you find ways to reduce your emissions effectively.",
+    bgColor: "bg-[#ff8c00]", // orange background
+    textColor: "text-white",
   },
   {
-    id: "climate",
-    title: "Project 2 — Reports on Climate Destruction",
+    id: "tool-3",
+    title: "Tool 3 — Climate Impact Calculator",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+      "Estimate the environmental impact of various activities and products.",
     fullDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis",
-    bgColor: "bg-[#d422ff]", // 🟣 soft purple background
-    textColor: "text-[var(--color-white)]",
-    chapters: [
-      {
-        id: "emissions",
-        title: "Chapter 1: Carbon emissions data",
-        description:
-          "Dataset of emissions metrics and links to exposures.",
-        href: "/projects/climate/chapters/emissions",
-      },
-    ],
+      "The Climate Impact Calculator lets you input various data points to calculate carbon footprints and helps you find ways to reduce your emissions effectively.",
+    bgColor: "bg-[#ff8c00]", // orange background
+    textColor: "text-white",
   },
-];
-
+]
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Freeports — Projects" },
+    { title: "Freeports — Tools" },
     {
       name: "description",
-      content: "Overview of our projects and how to contribute.",
+      content: "Overview of tools available for data analysis and environmental tracking.",
     },
   ];
 }
@@ -71,28 +52,26 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-export default function Projects() {
+export default function ToolsPage() {
   return (
     <Page>
-      {/* Intro block: force it to occupy full grid and center the content */}
+      {/* Intro block */}
       <section
-        className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8"
-        /* col-span-full / col-start-1 override the global section grid placement */
+        className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8 mt-12"
       > 
-        <h1 className="text-3xl font-bold mb-3">Page under development</h1>
-        <p className="mt-2 text-gray-700 text-justify sm:text-center">
-          Here you can explore the projects we are working on. Click a project
-          to expand its description; then show chapters to explore the work
-          breakdown. Each chapter can link to a full page.
+        <h1 className="text-xl font-bold mb-3">Tools Under Development</h1>
+        <p className="mt-2 text-gray-700 text-justify sm:text-center text-base leading-relaxed">
+          Explore the various tools we are building to assist in data analysis and climate tracking. Click a tool to expand its description.
         </p>
       </section>
 
-      {/* Projects list: same override so project cards appear centered under the intro */}
+      {/* Tools list */}
       <div className="col-span-full col-start-1 w-full flex flex-col items-center space-y-6 pb-12">
-        {PROJECTS.map((p) => (
-          <ProjectSection key={p.id} project={p} />
+        {TOOLS.map((t) => (
+          <ToolSection key={t.id} tool={t} />
         ))}
       </div>
     </Page>
   );
 }
+

@@ -15,7 +15,7 @@ const PROJECTS: Project[] = [
     textColor: "text-[var(--color-white)]",
   },
   {
-    id: "climate",
+    id: "climate-1",
     title: "Project 2 — Reports on Climate Destruction",
     shortDescription:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
@@ -23,34 +23,16 @@ const PROJECTS: Project[] = [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis",
     bgColor: "bg-[#f9be2d]", // 🟡 soft yellow background
     textColor: "text-[var(--color-white)]",
-    chapters: [
-      {
-        id: "emissions",
-        title: "Chapter 1: Carbon emissions data",
-        description:
-          "Dataset of emissions metrics and links to exposures.",
-        href: "/projects/climate/chapters/emissions",
-      },
-    ],
   },
   {
-    id: "climate",
-    title: "Project 2 — Reports on Climate Destruction",
+    id: "climate-2",
+    title: "Project 3 — Reports on Climate Destruction",
     shortDescription:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
     fullDescription:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis",
     bgColor: "bg-[#d422ff]", // 🟣 soft purple background
     textColor: "text-[var(--color-white)]",
-    chapters: [
-      {
-        id: "emissions",
-        title: "Chapter 1: Carbon emissions data",
-        description:
-          "Dataset of emissions metrics and links to exposures.",
-        href: "/projects/climate/chapters/emissions",
-      },
-    ],
   },
 ];
 
@@ -77,13 +59,11 @@ export default function Projects() {
       {/* Intro block: force it to occupy full grid and center the content */}
       <section
         className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8"
-        /* col-span-full / col-start-1 override the global section grid placement */
       > 
         <h1 className="text-3xl font-bold mb-3">Page under development</h1>
         <p className="mt-2 text-gray-700 text-justify sm:text-center">
           Here you can explore the projects we are working on. Click a project
-          to expand its description; then show chapters to explore the work
-          breakdown. Each chapter can link to a full page.
+          to expand its description.
         </p>
       </section>
 
@@ -96,3 +76,4 @@ export default function Projects() {
     </Page>
   );
 }
+

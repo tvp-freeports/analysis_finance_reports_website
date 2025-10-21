@@ -1,26 +1,45 @@
 import { NavLink } from "react-router";
 
 export default function Header() {
-  return <header className="
-    header-footer
-    rounded-b-full
-    bg-purple 
-    shadow-md/50
-    sm:gap-4
-    items-center
-    sm:items-start
-    flex
-    flex-col
-    ">
-      <img alt="Desktop version of Freeports faboulous logo" className="hidden sm:inline w-full md:w-8/10 lg:w-7/10" src="/assets/logo/complete.svg"/>
-    <nav>
-         <NavLink className="navigation-link-header" to="/">Home</NavLink>
-         <NavLink className="navigation-link-header" to="/tools">Tools</NavLink>
-         <NavLink className="navigation-link-header" to="/projects">Projects</NavLink>
-         <NavLink className="navigation-link-header" to="/contribute">Contribute</NavLink>
-         <NavLink className="navigation-link-header" to="/community">Community</NavLink>
-         <NavLink className="navigation-link-header" to="/contact-us">Contact Us</NavLink>
-    </nav>
-      <img alt="Mobile version of Freeports faboulous logo" className="sm:hidden w-6/10 justify-center" src="/assets/logo/square.svg"/>
-  </header> ;
+  return (
+    <header className="w-full flex flex-col items-center py-4">
+      {/* Desktop logo */}
+      <img
+        alt="Desktop version of Freeports fabulous logo"
+        className="hidden sm:block w-60 md:w-72 lg:w-80 mx-auto my-6"
+        src="/assets/logo/complete.svg"
+      />
+
+      {/* Navigation */}
+      <nav className="mt-2 w-full flex justify-center">
+        <ul className="flex flex-wrap justify-between w-4/5 gap-x-4 gap-y-2">
+          {[
+            { path: "/", label: "Home" },
+            { path: "/tools", label: "Tools" },
+            { path: "/projects", label: "Projects" },
+            { path: "/contribute", label: "Contribute" },
+            { path: "/community", label: "Community" },
+            { path: "/contact-us", label: "Contact Us" },
+          ].map(({ path, label }) => (
+            <li key={path}>
+              <NavLink
+                to={path}
+                className="uppercase font-regular tracking-wide navigation-link-header"
+              >
+                {label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Mobile logo */}
+      <img
+        alt="Mobile version of Freeports fabulous logo"
+        className="sm:hidden w-40 my-6"
+        src="/assets/logo/square.svg"
+      />
+    </header>
+  );
 }
+
