@@ -1,5 +1,5 @@
 import React from "react";
-import { ReadmrButton } from "./readmrButton"; // ✅ Adjust path if needed
+import { Button } from "./Button";
 
 export enum CardState {
   Default,
@@ -73,6 +73,7 @@ export function ProjectSection({
         }
       }}
     >
+      {/* Header */}
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <div className="text-2xl font-bold mb-2">{project.title}</div>
@@ -92,6 +93,7 @@ export function ProjectSection({
         )}
       </div>
 
+      {/* Expandable content */}
       <div
         id={`project-${project.id}`}
         className={`mt-4 overflow-hidden transition-[max-height] duration-300 ease-in-out ${
@@ -99,24 +101,33 @@ export function ProjectSection({
         }`}
         aria-hidden={!isExpanded}
       >
-        <div className="relative flex flex-col justify-between h-full pr-2 pb-14">
-          <p className="text-base text-justify [text-justify:inter-word]">
-            {project.fullDescription ?? project.shortDescription}
-          </p>
+        {/* flex-col with justify-between ensures button stays at bottom */}
+        <div className="relative flex flex-col h-full justify-between pr-2 pb-4">
+          <div>
+            <p className="text-base text-justify [text-justify:inter-word]">
+              {project.fullDescription ?? project.shortDescription}
+            </p>
+          </div>
 
-          <div className="absolute bottom-0 right-0">
-            <ReadmrButton
-              label="Read More"
-              onClick={(e) => e.stopPropagation()}
-              style={{
-                color: expandedBgColor ?? "#000",
-              }}
-              className=""
-            />
+          {/* ✅ Clickable button fixed at bottom of parent container */}
+          <div className="flex justify-end mt-4">
+            <a href="#" onClick={(e) => e.stopPropagation()}>
+              <Button
+                label="Read More"
+                style={{
+                  color: expandedBgColor ?? "#000", // text matches card bg
+                }}
+                className="bg-white px-6 py-3 rounded-full"
+              />
+            </a>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+
+
+
 

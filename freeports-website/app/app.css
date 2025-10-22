@@ -4,8 +4,6 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --text-base: 1.3rem;
-
-
   --color-purple: #000000;
   --color-purple-drk: #000000;
   --color-orange: #f9be2d;
@@ -31,51 +29,83 @@ h3 {
   @apply font-bold text-2xl sm:text-3xl;
 }
 
+h4 {
+  @apply font-bold text-3xl sm:text-3xl;
+}
+
 body {
   @apply flex flex-col items-center gap-7 text-base sm:text-2xl;
 }
 
-.tongue {
-  @apply  h-full overflow-visible;
-  @apply bg-red inset-shadow-sm inset-shadow-black/25 z-0;
-  
-}
 p {
   @apply text-justify;
 }
+
 section {
-  @apply  col-start-2 col-span-3;
-  @apply  flex flex-col gap-8 ;
+  @apply col-start-2 col-span-3 flex flex-col gap-8;
 }
 
-.tongue-r { 
-  @apply col-1 w-[95vw] lg:w-[88vw];
-  @apply rounded-r-4xl lg:rounded-r-full;
+.tongue-content {
+  @apply bg-black text-white py-10 px-8 shadow-lg w-screen max-w-4xl mx-auto mb-8 mt-6 text-base leading-relaxed;
 }
 
-.tongue-content{
-  @apply text-white text-shadow-md text-shadow-black/35 z-10 py-5;
+.tongue-content h2 {
+  @apply text-white text-2xl sm:text-3xl font-bold mb-4 text-left;
 }
 
-.tongue-l {
-  @apply col-1 w-screen ml-[7vw];
-  @apply rounded-4xl lg:rounded-l-full;
+.tongue-content p {
+  @apply text-white text-base sm:text-lg leading-relaxed text-justify;
 }
 
 .navigation-link-header {
-  @apply text-white text-shadow-lg text-shadow-purple-drk/40 text-sm sm:text-base;
-  @apply px-2 hover:text-orange hover:text-shadow-lg hover:text-shadow-purple-drk/70
-}
-.navigation-link-footer {
-  @apply hidden sm:inline;
-  @apply text-orange bg-red md:px-8 py-3;
-  @apply hover:bg-orange hover:text-red hover:text-shadow-lg hover:text-shadow-black/10;
-  @apply border-4 rounded-4xl  border-red shadow-lg;
+  @apply relative inline-block font-bold capitalize tracking-wide text-white text-base px-2 transition-all duration-200 ease-in-out;
 }
 
+.navigation-link-header::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.3, 1), width 0.5s ease-in-out;
+  will-change: transform, width;
+}
+
+.navigation-link-header:hover::after {
+  width: 100%;
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Active link border colors */
+.navigation-link-header[aria-current="page"][href="/"]::after,
+.navigation-link-header[aria-current="page"][href="/contribute"]::after {
+  background: #fc3284;
+  width: 100%;
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navigation-link-header[aria-current="page"][href="/tools"]::after,
+.navigation-link-header[aria-current="page"][href="/community"]::after {
+  background: #f9be2d;
+  width: 100%;
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navigation-link-header[aria-current="page"][href="/projects"]::after,
+.navigation-link-header[aria-current="page"][href="/contact-us"]::after {
+  background: #d422ff;
+  width: 100%;
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navigation-link-footer {
+  @apply hidden sm:inline text-orange bg-red md:px-8 py-3 hover:bg-orange hover:text-red hover:text-shadow-lg hover:text-shadow-black/10 border-4 rounded-4xl border-red shadow-lg;
+}
 
 .header-footer {
-  @apply font-bold uppercase;
-  @apply sm:rounded-3xl rounded-t-4xl shadow-black sm:m-13 md:m-16 lg:m-20 w-full sm:w-9/10;
-  @apply p-9;
+  @apply font-bold capitalize sm:rounded-3xl rounded-t-4xl shadow-black sm:m-13 md:m-16 lg:m-20 w-full sm:w-9/10 p-9;
 }

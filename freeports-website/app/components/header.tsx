@@ -3,12 +3,14 @@ import { NavLink } from "react-router";
 export default function Header() {
   return (
     <header className="w-full flex flex-col bg-purple items-center py-4">
-      {/* Desktop logo */}
-      <img
-        alt="Desktop version of Freeports fabulous logo"
-        className="hidden sm:block w-60 md:w-72 lg:w-80 mx-auto my-6"
-        src="/assets/logo/complete.svg"
-      />
+      {/* Desktop logo (clickable) */}
+      <NavLink to="/" className="hidden sm:block">
+        <img
+          alt="Desktop version of Freeports fabulous logo"
+          className="w-60 md:w-72 lg:w-80 mx-auto my-6"
+          src="/assets/logo/complete.svg"
+        />
+      </NavLink>
 
       {/* Navigation */}
       <nav className="mt-2 w-full flex justify-center">
@@ -22,10 +24,7 @@ export default function Header() {
             { path: "/contact-us", label: "Contact Us" },
           ].map(({ path, label }) => (
             <li key={path}>
-              <NavLink
-                to={path}
-                className="uppercase font-regular tracking-wide navigation-link-header"
-              >
+              <NavLink to={path} className="navigation-link-header">
                 {label}
               </NavLink>
             </li>
@@ -33,12 +32,14 @@ export default function Header() {
         </ul>
       </nav>
 
-      {/* Mobile logo */}
-      <img
-        alt="Mobile version of Freeports fabulous logo"
-        className="sm:hidden w-40 my-6"
-        src="/assets/logo/square.svg"
-      />
+      {/* Mobile logo (clickable) */}
+      <NavLink to="/" className="sm:hidden">
+        <img
+          alt="Mobile version of Freeports fabulous logo"
+          className="w-40 my-6"
+          src="/assets/logo/square.svg"
+        />
+      </NavLink>
     </header>
   );
 }

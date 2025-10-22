@@ -10,11 +10,13 @@ export default function Footer() {
         sm:grid-cols-3
         items-center
         overflow-visible
+        py-6
       "
     >
+      {/* Social Icons */}
       <ul className="col-1 justify-center sm:justify-start flex flex-row gap-6 items-center">
         <li>
-          <a href="https://github.com/tvp-freeports/analysis_finance_reports">
+          <a href="https://github.com/tvp-freeports/analysis_finance_reports" target="_blank" rel="noopener noreferrer">
             <img
               className="w-20"
               src="assets/github-logo/github-mark.svg"
@@ -23,7 +25,7 @@ export default function Footer() {
           </a>
         </li>
         <li>
-          <a href="https://github.com/tvp-freeports/analysis_finance_reports">
+          <a href="https://github.com/tvp-freeports/analysis_finance_reports" target="_blank" rel="noopener noreferrer">
             <img
               className="w-20"
               src="assets/telegram-logo.svg"
@@ -32,7 +34,7 @@ export default function Footer() {
           </a>
         </li>
         <li>
-          <a href="https://discord.gg/FRcSBWtcDR">
+          <a href="https://discord.gg/FRcSBWtcDR" target="_blank" rel="noopener noreferrer">
             <img
               className="w-20"
               src="assets/discord-logo.svg"
@@ -42,21 +44,42 @@ export default function Footer() {
         </li>
       </ul>
 
-      <nav className="sm:ml-10 lg:ml-0 sm:text-sm lg:text-base col-2 lg:col-3 flex flex-row gap-5 items-center">
-        <NavLink
-          to="/contribute"
-          className="bg-black text-white px-6 py-3 inline-block rounded"
-        >
-          Help the project
-        </NavLink>
-        <NavLink
-          to="/contact-us"
-          className="bg-black text-white px-6 py-3 inline-block rounded"
-        >
-          Reach us
-        </NavLink>
+      {/* Footer Navigation Links */}
+      <nav className="sm:ml-10 lg:ml-0 sm:text-sm lg:text-base col-2 lg:col-3 flex flex-row gap-5 items-center justify-center sm:justify-end">
+        {[
+          { path: "/contribute", label: "Help the project" },
+          { path: "/contact-us", label: "Reach us" },
+        ].map(({ path, label }) => (
+          <NavLink
+            key={path}
+            to={path}
+            className={`
+              relative
+              text-[#030712]
+              font-medium
+              first-letter:capitalize
+              before:block
+              before:absolute
+              before:bottom-0
+              before:left-1/2
+              before:w-0
+              before:h-[2px]
+              before:bg-[#030712]
+              before:origin-center
+              before:transition-all
+              before:duration-300
+              hover:before:w-full
+              hover:before:left-0
+              transition-colors
+              duration-300
+            `}
+          >
+            {label}
+          </NavLink>
+        ))}
       </nav>
     </footer>
   );
 }
+
 

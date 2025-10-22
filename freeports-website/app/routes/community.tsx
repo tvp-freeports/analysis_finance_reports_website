@@ -1,12 +1,10 @@
 import type { Route } from "./+types/home";
-import Header from "../components/header";
 import Page from "../components/page";
-// import { Footer } from "../components/footer"
 
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Freeports community" },
-    { name: "description", content: "Meet others collaborators!" },
+    { name: "description", content: "Meet other collaborators!" },
   ];
 }
 
@@ -18,42 +16,53 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export default function Community() {
-  return <Page>
-    <section>
-      <h2>
-        Join the the adventure
-      </h2>
-      <p>
-        Being part in a project with other peoples is always an enriching experience. 
-        We think that the success of <em>Freeports</em> <span className="underline">is</span> and <span className="underline">should be</span> binded
-        with the health and success of his community. For this reason we empathize the importance
-        of the humans interactions and exchange. We hope to facilitate it providing a <strong>
-          <a href="https://t.me/TheFreeportsProject">telegram group</a>
-        </strong> and our <strong>
-          <a href="https://discord.gg/FRcSBWtcDR">discord group</a>
-        </strong>. Feel free to use the tool that you like the most but consider that for organization
-        purpose we officially provide and try to moderate on these two platform for now.
-      </p>
-    </section>
-    <div className="tongue tongue-r hidden sm:block"></div>
-    <div className="tongue col-1 w-screen sm:hidden"></div>
-    <section className="tongue-content">
-      <h2>
-        Code of conduct
-      </h2>
-      <p>
-        Nobody is perfect, not me, not you, not them... <br/>
-        Giving this premise we acknowledge that collaborate is as effective and fulfilling
-        as difficult and sometimes frustrating. For this reason we will try to facilitate
-        the cooperative environment safeguarding it in the way that we think more adequate.
-        The specific rules are specified on our <strong><a href="https://github.com/tvp-freeports/analysis_finance_reports/blob/main/CODE_OF_CONDUCT.md">GitHub repository </a></strong>
-        (also this document like everything else is a work in progress). We reccomand to read it.
-        These rules are subordinate to the imperative master rule of respect towards the other peoples.
-        Unfortunately common sense is common just nominally but not factually; 
-        this because of the uniqueness of everyone. For this reason we ecourage to point out 
-        any violation of the <strong>code of conduct</strong> or of any uncomfortable interpersonal dynamic
-        that can rise (and unfortunately statistically speaking <em>will rise</em>) in this jurney.
-      </p>
-    </section>
-  </Page>;
+  return (
+    <Page>
+      <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-12 mt-12">
+        <h2 className="text-left text-xl font-semibold mb-3">Join the adventure</h2>
+        <p className="text-gray-700 text-justify leading-relaxed">
+          Being part of a collaborative project is always enriching. We believe
+          the success of <em>Freeports</em> is bound to the health and growth of
+          its community. To facilitate this, we provide a{" "}
+          <strong>
+            <a href="https://t.me/TheFreeportsProject" className="underline">
+              Telegram group
+            </a>
+          </strong>{" "}
+          and a{" "}
+          <strong>
+            <a href="https://discord.gg/FRcSBWtcDR" className="underline">
+              Discord server
+            </a>
+          </strong>
+          .
+        </p>
+      </section>
+
+      {/* Dark card */}
+      <section className="tongue-content">
+        <h2>Code of conduct</h2>
+        <p>
+          Nobody is perfect — not me, not you, not them. Collaboration can be
+          both fulfilling and challenging. For this reason, we aim to foster a
+          cooperative and respectful environment.
+          <br />
+          <br />
+          Our specific rules are listed in our{" "}
+          <strong>
+            <a
+              href="https://github.com/tvp-freeports/analysis_finance_reports/blob/main/CODE_OF_CONDUCT.md"
+              className="underline"
+            >
+              GitHub repository
+            </a>
+          </strong>
+          . These guidelines are subordinate to the master rule of respect for
+          others. If you ever witness or experience uncomfortable dynamics, we
+          encourage you to report them.
+        </p>
+      </section>
+    </Page>
+  );
 }
+
