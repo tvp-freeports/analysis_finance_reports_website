@@ -3,8 +3,6 @@ import { NavLink } from "react-router";
 export default function Footer() {
   return <footer className="
     header-footer
-    bg-orange
-    shadow-md/40
     grid
     grid-cols-1
     sm:grid-cols-3

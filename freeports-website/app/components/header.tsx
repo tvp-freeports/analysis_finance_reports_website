@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 export default function Header() {
   return (
-    <header className="w-full flex flex-col items-center py-4">
+    <header className="w-full flex flex-col bg-purple items-center py-4">
       {/* Desktop logo */}
       <img
         alt="Desktop version of Freeports fabulous logo"
