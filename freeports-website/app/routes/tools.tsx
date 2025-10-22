@@ -1,9 +1,10 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
 import { ToolSection, type Tool } from "../components/ToolsSection"; // Assuming you'll create a ToolSection component similar to ProjectSection
+import { CollapsableList, type ElementCollapsableListInfos } from "../components/lists/collapsable";
 
 /** Example data with background colors */
-const TOOLS: Tool[] = [
+const TOOLS: ElementCollapsableListInfos[] = [
   {
     id: "tool-1",
     title: "Tool 1 — Data Analysis Suite",
@@ -64,13 +65,14 @@ export default function ToolsPage() {
           Explore the various tools we are building to assist in data analysis and climate tracking. Click a tool to expand its description.
         </p>
       </section>
-
+      <CollapsableList elements={TOOLS}/>
       {/* Tools list */}
-      <div className="col-span-full col-start-1 w-full flex flex-col items-center space-y-6 pb-12">
+      {/*<div className="col-span-full col-start-1 w-full flex flex-col items-center space-y-6 pb-12">
         {TOOLS.map((t) => (
-          <ToolSection key={t.id} tool={t} />
+          <ToolSection key={t.id} tool={t}/>
         ))}
       </div>
+      */}
     </Page>
   );
 }
