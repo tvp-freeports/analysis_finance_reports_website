@@ -1,4 +1,5 @@
 import React from "react";
+import { ReadmrButton } from "./readmrButton"; // adjust path if needed
 
 export interface Project {
   id: string;
@@ -6,51 +7,74 @@ export interface Project {
   shortDescription: string;
   fullDescription?: string;
   href?: string;
-  bgColor?: string;    // optional background color
-  textColor?: string;  // optional text color (e.g. "text-white")
+  bgColor?: string;
+  textColor?: string;
 }
 
 interface ProjectSectionProps {
   project: Project;
 }
 
-/**
- * Centered Project card with optional background & text colors,
- * and adjustable typography for title / description.
- */
+const expandedBgColorMap: Record<string, string> = {
+  "project-1a": "#fc3284",
+  "project-2a": "#f9be2d",
+  "project-3a": "#d422ff",
+};
+
 export function ProjectSection({ project }: ProjectSectionProps) {
   const [open, setOpen] = React.useState(false);
 
-  // Apply chosen background + text colors (fallback to neutral)
-  const backgroundClass = project.bgColor ?? "bg-white dark:bg-gray-900";
-  const textClass = project.textColor ?? "text-black dark:text-white";
+  const collapsedBgColor = "#030712";
+  const expandedBgColor = expandedBgColorMap[project.id];
+  const backgroundColor = open ? expandedBgColor : collapsedBgColor;
+
+  const textClass = project.textColor ?? "text-white";
+
+  const toggleOpen = () => setOpen((o) => !o);
 
   return (
     <section
-      // Add conditional rounded radius and remove border
-      className={`col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8 
-        ${backgroundClass} ${textClass} 
-        ${open ? "rounded-none" : "rounded-3xl"} 
-        p-6 shadow-sm transition-all duration-300 cursor-pointer`}
-      onClick={() => setOpen((o) => !o)}
-      aria-expanded={open}
-      aria-controls={`project-${project.id}`}
-      role="button"
-      tabIndex={0}
+      onClick={toggleOpen}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          setOpen((o) => !o);
+          toggleOpen();
         }
       }}
+      role="button"
+      tabIndex={0}
+      aria-expanded={open}
+      aria-controls={`project-${project.id}`}
+      style={{
+        backgroundColor,
+        transition: "background-color 0.3s ease",
+      }}
+      className={`
+        col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8 
+        p-6 shadow-sm rounded-none cursor-pointer
+        ${textClass}
+      `}
     >
-      {/* Header content */}
-      <div className="flex flex-col">
-        {/* Project Title */}
-        <div className="text-2xl font-bold">{project.title}</div>
+      <div className="flex items-start justify-between">
+        <div className="flex-1">
+          <div className="text-2xl font-bold mb-2">{project.title}</div>
 
-        {/* Short description */}
-        <div className="text-base mt-1 opacity-90">{project.shortDescription}</div>
+          {/* Always visible short description */}
+          <div className="text-base opacity-90 text-justify [text-justify:inter-word]">
+            {project.shortDescription}
+          </div>
+        </div>
+
+        {/* Optional external link */}
+        {project.href && (
+          <a
+            href={project.href}
+            className="text-sm underline ml-4 flex-shrink-0"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Open project page
+          </a>
+        )}
       </div>
 
       {/* Expandable content */}
@@ -61,13 +85,28 @@ export function ProjectSection({ project }: ProjectSectionProps) {
         }`}
         aria-hidden={!open}
       >
-        <div className="text-base mt-2">
-          <p>{project.fullDescription ?? project.shortDescription}</p>
+        <div className="relative flex flex-col justify-between h-full pr-2 pb-14">
+          <p className="text-base text-justify [text-justify:inter-word]">
+            {project.fullDescription ?? project.shortDescription}
+          </p>
+
+          {/* Read More button – absolutely placed bottom right */}
+          <div className="absolute bottom-0 right-0">
+            <ReadmrButton
+              label="Read More"
+              onClick={() => {}}
+              className=""
+              style={{
+                color: expandedBgColor ?? "#000",
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
 
 
 
