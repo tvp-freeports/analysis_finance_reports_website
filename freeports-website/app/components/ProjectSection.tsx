@@ -1,5 +1,11 @@
 import React from "react";
-import { ReadmrButton } from "./readmrButton"; // adjust path if needed
+import { ReadmrButton } from "./readmrButton"; // ✅ Adjust path if needed
+
+export enum CardState {
+  Default,
+  Expanded,
+  Collapsed,
+}
 
 export interface Project {
   id: string;
@@ -13,6 +19,8 @@ export interface Project {
 
 interface ProjectSectionProps {
   project: Project;
+  state: CardState;
+  onClick: () => void;
 }
 
 const expandedBgColorMap: Record<string, string> = {
@@ -21,51 +29,58 @@ const expandedBgColorMap: Record<string, string> = {
   "project-3a": "#d422ff",
 };
 
-export function ProjectSection({ project }: ProjectSectionProps) {
-  const [open, setOpen] = React.useState(false);
-
+export function ProjectSection({
+  project,
+  state,
+  onClick,
+}: ProjectSectionProps) {
   const collapsedBgColor = "#030712";
   const expandedBgColor = expandedBgColorMap[project.id];
-  const backgroundColor = open ? expandedBgColor : collapsedBgColor;
+  const isExpanded = state === CardState.Expanded;
 
   const textClass = project.textColor ?? "text-white";
 
-  const toggleOpen = () => setOpen((o) => !o);
-
   return (
     <section
-      onClick={toggleOpen}
+      onClick={onClick}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          toggleOpen();
+          onClick();
         }
       }}
       role="button"
       tabIndex={0}
-      aria-expanded={open}
+      aria-expanded={isExpanded}
       aria-controls={`project-${project.id}`}
       style={{
-        backgroundColor,
+        backgroundColor: isExpanded ? expandedBgColor : collapsedBgColor,
         transition: "background-color 0.3s ease",
       }}
       className={`
-        col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8 
+        col-span-full col-start-1 w-full max-w-4xl mx-auto mb-6
         p-6 shadow-sm rounded-none cursor-pointer
         ${textClass}
       `}
+      onMouseEnter={(e) => {
+        if (!isExpanded && expandedBgColor) {
+          (e.currentTarget as HTMLElement).style.backgroundColor = expandedBgColor;
+        }
+      }}
+      onMouseLeave={(e) => {
+        if (!isExpanded) {
+          (e.currentTarget as HTMLElement).style.backgroundColor = collapsedBgColor;
+        }
+      }}
     >
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <div className="text-2xl font-bold mb-2">{project.title}</div>
-
-          {/* Always visible short description */}
           <div className="text-base opacity-90 text-justify [text-justify:inter-word]">
             {project.shortDescription}
           </div>
         </div>
 
-        {/* Optional external link */}
         {project.href && (
           <a
             href={project.href}
@@ -77,28 +92,26 @@ export function ProjectSection({ project }: ProjectSectionProps) {
         )}
       </div>
 
-      {/* Expandable content */}
       <div
         id={`project-${project.id}`}
         className={`mt-4 overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-          open ? "max-h-[2000px]" : "max-h-0"
+          isExpanded ? "max-h-[2000px]" : "max-h-0"
         }`}
-        aria-hidden={!open}
+        aria-hidden={!isExpanded}
       >
         <div className="relative flex flex-col justify-between h-full pr-2 pb-14">
           <p className="text-base text-justify [text-justify:inter-word]">
             {project.fullDescription ?? project.shortDescription}
           </p>
 
-          {/* Read More button – absolutely placed bottom right */}
           <div className="absolute bottom-0 right-0">
             <ReadmrButton
               label="Read More"
-              onClick={() => {}}
-              className=""
+              onClick={(e) => e.stopPropagation()}
               style={{
                 color: expandedBgColor ?? "#000",
               }}
+              className=""
             />
           </div>
         </div>
@@ -106,7 +119,4 @@ export function ProjectSection({ project }: ProjectSectionProps) {
     </section>
   );
 }
-
-
-
 

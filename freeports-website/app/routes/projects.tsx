@@ -1,15 +1,20 @@
-// routes/projects.tsx or wherever this file lives
+// projects.tsx
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import { ProjectSection, type Project } from "../components/ProjectSection";
+import {
+  ProjectSection,
+  type Project,
+  CardState,
+} from "../components/ProjectSection";
+import React from "react";
 
-/** Example data with background colors */
+// Your existing project data
 const PROJECTS: Project[] = [
   {
     id: "project-1a",
     title: "Project 1 — Reports on the Israeli Occupation",
     shortDescription: "Lorem ipsum dolor sit amet.",
-    fullDescription: "Full: Lorem ipsum dolor sit amet.",
+  fullDescription: "Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit ametFull: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit ametFull: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit ametFull: Lorem ipsum dolor sit amet. Full: Lorem ipsum dolor sit amet. Full: Lorem",
     textColor: "text-[var(--color-white)]",
   },
   {
@@ -66,7 +71,30 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+// Custom hook managing card states with described toggle behavior
+function useCardStates(length: number) {
+  const [states, setStates] = React.useState<CardState[]>(
+    Array(length).fill(CardState.Default)
+  );
+
+  const toggleCard = (index: number) => {
+    if (states[index] === CardState.Expanded) {
+      // Clicking an expanded card resets all cards to default
+      setStates(Array(length).fill(CardState.Default));
+    } else {
+      // Clicking a default/collapsed card expands it and collapses others
+      setStates(states.map((_, i) =>
+        i === index ? CardState.Expanded : CardState.Collapsed
+      ));
+    }
+  };
+
+  return { states, toggleCard };
+}
+
 export default function Projects() {
+  const { states, toggleCard } = useCardStates(PROJECTS.length);
+
   return (
     <Page>
       <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8">
@@ -78,13 +106,19 @@ export default function Projects() {
       </section>
 
       <div className="col-span-full col-start-1 w-full flex flex-col items-center space-y-6 pb-12">
-        {PROJECTS.map((p) => (
-          <ProjectSection key={p.id} project={p} />
+        {PROJECTS.map((project, i) => (
+          <ProjectSection
+            key={`${project.id}-${i}`}
+            project={project}
+            state={states[i]}
+            onClick={() => toggleCard(i)}
+          />
         ))}
       </div>
     </Page>
   );
 }
+
 
 
 

@@ -12,7 +12,7 @@ const TOOLS: ElementCollapsableListInfos[] = [
       "Powerful data analysis tools to make sense of your datasets quickly and intuitively.",
     fullDescription:
       "Our Data Analysis Suite helps you explore, visualize, and extract insights from data with ease. It supports multiple formats and includes advanced statistical features.",
-    bgColor: "bg-[#1e90ff]", // blue background
+    bgColor: "bg-[#030712]",
     textColor: "text-white",
   },
   {
@@ -22,7 +22,7 @@ const TOOLS: ElementCollapsableListInfos[] = [
       "Estimate the environmental impact of various activities and products.",
     fullDescription:
       "The Climate Impact Calculator lets you input various data points to calculate carbon footprints and helps you find ways to reduce your emissions effectively.",
-    bgColor: "bg-[#ff8c00]", // orange background
+    bgColor: "bg-[#030712]", // orange background
     textColor: "text-white",
   },
   {
@@ -32,7 +32,7 @@ const TOOLS: ElementCollapsableListInfos[] = [
       "Estimate the environmental impact of various activities and products.",
     fullDescription:
       "The Climate Impact Calculator lets you input various data points to calculate carbon footprints and helps you find ways to reduce your emissions effectively.",
-    bgColor: "bg-[#ff8c00]", // orange background
+    bgColor: "bg-[#030712]", // orange background
     textColor: "text-white",
   },
 ]
