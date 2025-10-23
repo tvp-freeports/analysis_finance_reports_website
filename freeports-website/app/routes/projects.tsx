@@ -11,51 +11,51 @@ import {
 const PROJECTS: Project[] = [
   {
     id: "project-1a",
-    title: "Project 1 — Reports on the Israeli Occupation",
-    shortDescription: "Exploring reports and analyses on the occupation.",
+    title: "Project 1",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
     fullDescription:
-      "In-depth documentation and critical analysis of the Israeli occupation, with primary research and verified data sources to inform global audiences.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
     textColor: "text-[var(--color-white)]",
   },
   {
     id: "project-2a",
-    title: "Project 2 — Reports on Climate Destruction",
-    shortDescription: "Tracking the global impact of climate degradation.",
+    title: "Project 2",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
     fullDescription:
-      "Comprehensive studies on environmental damage, corporate accountability, and sustainable solutions across regions most affected by climate change.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
     textColor: "text-[var(--color-white)]",
   },
   {
     id: "project-3a",
-    title: "Project 3 — Data on Financial Secrecy",
-    shortDescription: "Investigating tax havens and global inequality.",
+    title: "Project 3",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
     fullDescription:
-      "Our team analyzes leaked documents and economic indicators to uncover how offshore finance systems perpetuate inequality and corruption.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
     textColor: "text-[var(--color-white)]",
   },
   // Last 3 cards reuse the IDs of the first 3
   {
     id: "project-1a",
-    title: "Project 4 — Cultural Heritage in Conflict Zones",
-    shortDescription: "Preserving artifacts and cultural sites under threat.",
+    title: "Project 4",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
     fullDescription:
-      "An initiative aimed at mapping and digitally preserving cultural heritage at risk in active conflict regions.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
     textColor: "text-[var(--color-white)]",
   },
   {
     id: "project-2a",
-    title: "Project 5 — Global Migration Patterns",
-    shortDescription: "Studying displacement and migration routes.",
+    title: "Project 5",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
     fullDescription:
-      "Combining open-source mapping and refugee data to visualize global migration patterns and policy impacts.",
+      "CLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
     textColor: "text-[var(--color-white)]",
   },
   {
     id: "project-3a",
-    title: "Project 6 — The Future of Freeports",
-    shortDescription: "Analyzing the role of freeports in global trade.",
+    title: "Project 6s",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
     fullDescription:
-      "Researching the rise of freeports and their impact on transparency, taxation, and cultural property trade.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
     textColor: "text-[var(--color-white)]",
   },
 ];

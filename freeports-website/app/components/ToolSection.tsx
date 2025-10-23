@@ -3,20 +3,18 @@ import type { ElementCollapsableListInfos } from "./lists/collapsable";
 
 interface ToolSectionProps {
   tool: ElementCollapsableListInfos;
-  href?: string; // optional, add real links later
 }
 
-// Map each tool to its hover color
 const hoverBgMap: Record<string, string> = {
   "tool-1": "#fc3284", // pink
   "tool-2": "#f9be2d", // yellow
   "tool-3": "#d422ff", // purple
 };
 
-export function ToolSection({ tool, href = "#" }: ToolSectionProps) {
+export function ToolSection({ tool }: ToolSectionProps) {
   return (
     <a
-      href={href}
+      href={tool.href ?? "#"} // ✅ use href from tool object
       className={`w-full max-w-4xl p-6 shadow-sm cursor-pointer ${tool.bgColor} ${tool.textColor} rounded-none transition`}
       style={{
         transition: "background-color 0.3s ease",

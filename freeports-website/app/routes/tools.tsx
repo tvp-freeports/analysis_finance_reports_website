@@ -7,33 +7,37 @@ import type { ElementCollapsableListInfos } from "../components/lists/collapsabl
 const TOOLS: ElementCollapsableListInfos[] = [
   {
     id: "tool-1",
-    title: "Tool 1 — Data Analysis Suite",
+    title: "Tool 1",
     shortDescription:
-      "Powerful data analysis tools to make sense of your datasets quickly and intuitively.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat",
     fullDescription:
       "Our Data Analysis Suite helps you explore, visualize, and extract insights from data with ease. It supports multiple formats and includes advanced statistical features.",
     bgColor: "bg-[#030712]",
     textColor: "text-white",
+    href: "https://github.com/tvp-freeports"
+    
   },
   {
     id: "tool-2",
-    title: "Tool 2 — Climate Impact Calculator",
+    title: "Tool 2",
     shortDescription:
-      "Estimate the environmental impact of various activities and products.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat",
     fullDescription:
       "The Climate Impact Calculator lets you input various data points to calculate carbon footprints and helps you find ways to reduce your emissions effectively.",
     bgColor: "bg-[#030712]",
     textColor: "text-white",
+    href: "https://github.com/tvp-freeports"
   },
   {
     id: "tool-3",
-    title: "Tool 3 — Emissions Tracker",
+    title: "Tool 3",
     shortDescription:
-      "Track and visualize emissions from different sources in real time.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat",
     fullDescription:
       "This tool allows you to monitor your carbon footprint over time, identify high-emission activities, and suggest actionable improvements.",
     bgColor: "bg-[#030712]",
     textColor: "text-white",
+    href: "https://github.com/tvp-freeports"
   },
 ];
 
@@ -59,9 +63,9 @@ export default function ToolsPage() {
     <Page>
       {/* Intro block */}
       <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8 mt-12">
-        <h1 className="text-xl font-bold mb-3">Tools Under Development</h1>
+        <h1 className="text-xl font-bold mb-3">Tools (under development)</h1>
         <p className="mt-2 text-gray-700 text-justify sm:text-center text-base leading-relaxed">
-          Explore the various tools we are building to assist in data analysis and climate tracking. All tools are fully visible below.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </p>
       </section>
 
