@@ -14,7 +14,7 @@ export default function Footer() {
       "
     >
       {/* Social Icons */}
-      <ul className="col-1 justify-center sm:justify-start flex flex-row gap-6 items-center">
+      <ul className="row-start-1 col-1 justify-center sm:justify-start flex flex-row gap-6 items-center">
         <li>
           <a href="https://github.com/tvp-freeports/analysis_finance_reports" target="_blank" rel="noopener noreferrer">
             <img
@@ -45,10 +45,10 @@ export default function Footer() {
       </ul>
 
       {/* Footer Navigation Links */}
-      <nav className="sm:ml-10 lg:ml-0 sm:text-sm lg:text-base col-2 lg:col-3 flex flex-row gap-5 items-center justify-center sm:justify-end">
+      <nav className="mt-6 sm:mt-0 sm:ml-10 lg:ml-0 col-2 lg:col-3 flex flex-row gap-6 items-center justify-center sm:justify-end">
         {[
-          { path: "/contribute", label: "Help the project" },
-          { path: "/contact-us", label: "Reach us" },
+          { path: "/contribute", label: "Join us" },
+          { path: "/contact-us", label: "Reach out" },
         ].map(({ path, label }) => (
           <NavLink
             key={path}

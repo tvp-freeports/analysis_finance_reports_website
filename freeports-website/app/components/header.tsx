@@ -4,20 +4,29 @@ export default function Header() {
   return (
     <header className="w-full flex flex-col bg-purple items-center py-4">
       {/* Desktop logo (clickable) */}
-      <NavLink to="/" className="hidden sm:block">
+      <div to="/" className="hidden sm:block">
         <img
           alt="Desktop version of Freeports fabulous logo"
           className="w-60 md:w-72 lg:w-80 mx-auto my-6"
           src="/assets/logo/complete.svg"
         />
-      </NavLink>
+      </div>
+
+      {/* Mobile logo (clickable) */}
+      <div to="/" className="sm:hidden">
+        <img
+          alt="Mobile version of Freeports fabulous logo"
+          className="w-40 my-6"
+          src="/assets/logo/square.svg"
+        />
+      </div>
 
       {/* Navigation */}
       <nav className="mt-2 w-full flex justify-center">
         <ul className="flex flex-wrap justify-between w-4/5 gap-x-4 gap-y-2">
           {[
             { path: "/", label: "Home" },
-            { path: "/tools", label: "Tools" },
+            { path: "/tools", label: "Resources" },
             { path: "/projects", label: "Projects" },
             { path: "/contribute", label: "Contribute" },
             { path: "/community", label: "Community" },
@@ -31,15 +40,6 @@ export default function Header() {
           ))}
         </ul>
       </nav>
-
-      {/* Mobile logo (clickable) */}
-      <NavLink to="/" className="sm:hidden">
-        <img
-          alt="Mobile version of Freeports fabulous logo"
-          className="w-40 my-6"
-          src="/assets/logo/square.svg"
-        />
-      </NavLink>
     </header>
   );
 }

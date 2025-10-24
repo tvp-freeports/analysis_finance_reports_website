@@ -15,7 +15,7 @@ export function ToolSection({ tool }: ToolSectionProps) {
   return (
     <a
       href={tool.href ?? "#"} // ✅ use href from tool object
-      className={`w-full max-w-4xl p-6 shadow-sm cursor-pointer ${tool.bgColor} ${tool.textColor} rounded-none transition`}
+      className={`flex flex-col gap-3 w-full max-w-2xl p-6 shadow-sm cursor-pointer ${tool.bgColor} ${tool.textColor} rounded-none transition`}
       style={{
         transition: "background-color 0.3s ease",
       }}
@@ -28,8 +28,8 @@ export function ToolSection({ tool }: ToolSectionProps) {
           tool.bgColor.replace("bg-[", "").replace("]", "");
       }}
     >
-      <h2 className="text-2xl font-bold mb-2">{tool.title}</h2>
-      <p className="text-base opacity-90">{tool.shortDescription}</p>
+      <h2 className="font-bold">{tool.title}</h2>
+      <p className="opacity-90">{tool.fullDescription}</p>
     </a>
   );
 }

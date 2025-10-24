@@ -7,46 +7,50 @@ import type { ElementCollapsableListInfos } from "../components/lists/collapsabl
 const TOOLS: ElementCollapsableListInfos[] = [
   {
     id: "tool-1",
-    title: "Tool 1",
-    shortDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat",
+    title: "Impact Drive",
     fullDescription:
-      "Our Data Analysis Suite helps you explore, visualize, and extract insights from data with ease. It supports multiple formats and includes advanced statistical features.",
+      `The open-access workspace where we conduct the 
+      economic and legal research needed to track corporate
+      structures, identify where public information on the 
+      social impact of consumption and investment products 
+      is located, and report on the corporate social 
+      responsibility implications when institutions are found
+      facilitating human rights violations and fuelling 
+      climate destruction.`,
     bgColor: "bg-[#030712]",
     textColor: "text-white",
-    href: "https://github.com/tvp-freeports"
+    href: ""
     
   },
   {
     id: "tool-2",
-    title: "Tool 2",
-    shortDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat",
+    title: "Freeports Software",
     fullDescription:
-      "The Climate Impact Calculator lets you input various data points to calculate carbon footprints and helps you find ways to reduce your emissions effectively.",
+      `The open-source software we use to collect the 
+      documents from corporate websites and regulatory 
+      authorities,  to parse the heterogenous pdf we 
+      encounter and return structured datasets.`,
     bgColor: "bg-[#030712]",
     textColor: "text-white",
     href: "https://github.com/tvp-freeports"
   },
   {
     id: "tool-3",
-    title: "Tool 3",
-    shortDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat",
+    title: "Portlight Analytics",
     fullDescription:
-      "This tool allows you to monitor your carbon footprint over time, identify high-emission activities, and suggest actionable improvements.",
+      `ts`,
     bgColor: "bg-[#030712]",
     textColor: "text-white",
-    href: "https://github.com/tvp-freeports"
+    href: ""
   },
 ];
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Freeports — Tools" },
+    { title: "Freeports resources" },
     {
       name: "description",
-      content: "Overview of tools available for data analysis and environmental tracking.",
+      content: "Overview of resources available for data analysis and environmental tracking.",
     },
   ];
 }
@@ -63,9 +67,21 @@ export default function ToolsPage() {
     <Page>
       {/* Intro block */}
       <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8 mt-12">
-        <h1 className="text-xl font-bold mb-3">Tools (under development)</h1>
-        <p className="mt-2 text-gray-700 text-justify sm:text-center text-base leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        <h1 className="font-bold mb-3">Resources</h1>
+        <p className="mt-2 text-gray-700 text-justify sm:text-center leading-relaxed">
+         Following, the toolkit we have  developed so far to foster transparency 
+         on the social and environmental impact of financial and consumption products.
+         <br /><br /> 
+         As of yet, these resources are ready to be combined to 
+         assess only some categories of financial institutions: open-end
+         investment funds and pension funds.
+         Thanks to the exceptionally strong transparency regulation 
+         mandating the periodical publication of their portfolio
+         holdings, one would only need to gather these 
+         disclosures from the managers' websites, use the Freeports 
+         open-source software to turn the pdf files into structured 
+         datasets, and elaborate the results as wished for 
+         personal or public use.      
         </p>
       </section>
 

@@ -18,22 +18,6 @@ export const links: Route.LinksFunction = () => [
 export default function Contribute() {
   return (
     <Page>
-      {/* Dark card for intro */}
-      <section className="tongue-content">
-        <h2>The ethics</h2>
-        <p>
-          Given the ethical foundation of this project, we uphold the core
-          principles of free software philosophy. We believe that personal
-          freedom begins with the free availability of information and
-          knowledge.
-          <br />
-          <br />
-          Our goal is to remove discriminatory barriers to accessing and using
-          data — whether economic, social, or otherwise — through an open,
-          independent, and pragmatic approach.
-        </p>
-      </section>
-
       {/* Regular content */}
       <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-12 mt-12">
         <h2 className="text-left text-xl font-semibold mb-3">How to contribute</h2>
@@ -62,6 +46,21 @@ export default function Contribute() {
             </a>
           </strong>
           . Everything is a work in progress — feel free to help improve it.
+        </p>
+      </section>
+    {/* Dark card for intro */}
+      <section className="tongue-content">
+        <h2>Ethics</h2>
+        <p>
+          Given the ethical foundation of this project, we uphold the core
+          principles of free software philosophy. We believe that personal
+          freedom begins with the free availability of information and
+          knowledge.
+          <br />
+          <br />
+          Our goal is to remove discriminatory barriers to accessing and using
+          data — whether economic, social, or otherwise — through an open,
+          independent, and pragmatic approach.
         </p>
       </section>
     </Page>

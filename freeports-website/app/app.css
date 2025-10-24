@@ -22,19 +22,11 @@ body {
 }
 
 h1, h2 {
-  @apply font-bold text-2xl sm:text-3xl mb-3;
-}
-
-h3 {
-  @apply font-bold text-2xl sm:text-3xl;
-}
-
-h4 {
-  @apply font-bold text-3xl sm:text-3xl;
+  @apply font-bold text-2xl sm:text-2xl mb-1;
 }
 
 body {
-  @apply flex flex-col items-center gap-7 text-base sm:text-2xl;
+  @apply flex flex-col items-center gap-7 text-base sm:text-lg;
 }
 
 p {
@@ -45,16 +37,24 @@ section {
   @apply col-start-2 col-span-3 flex flex-col gap-8;
 }
 
+section + .tongue-content {
+  @apply mt-[-1rem];  /* pull the next block up slightly */
+}
+
+.tongue-content + section {
+  @apply mt-[-1rem];
+}
+
 .tongue-content {
-  @apply bg-black text-white py-10 px-8 shadow-lg w-screen max-w-4xl mx-auto mb-8 mt-6 text-base leading-relaxed;
+  @apply bg-black text-white py-6 px-4 shadow-lg max-w-4xl mx-auto mb-4 mt-3 leading-relaxed;
 }
 
 .tongue-content h2 {
-  @apply text-white text-2xl sm:text-3xl font-bold mb-4 text-left;
+  @apply text-white text-2xl sm:text-2xl font-bold mb-4 text-left;
 }
 
 .tongue-content p {
-  @apply text-white text-base sm:text-lg leading-relaxed text-justify;
+  @apply text-white leading-relaxed text-justify;
 }
 
 .navigation-link-header {

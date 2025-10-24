@@ -58,7 +58,7 @@ export function ProjectSection({
         transition: "background-color 0.3s ease",
       }}
       className={`
-        col-span-full col-start-1 w-full max-w-4xl mx-auto mb-6
+        col-span-full col-start-1 w-full max-w-2xl mx-auto mb-6
         p-6 shadow-sm rounded-none cursor-pointer
         ${textClass}
       `}

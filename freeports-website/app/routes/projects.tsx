@@ -62,7 +62,7 @@ const PROJECTS: Project[] = [
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Freeports — Projects" },
+    { title: "Freeports projects" },
     {
       name: "description",
       content: "Overview of our projects and how to contribute.",
@@ -99,9 +99,9 @@ export default function Projects() {
   return (
     <Page>
       <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8 mt-12">
-        <h1 className="text-xl font-bold mb-3">Projects Under Development</h1>
+        <h1 className="text-xl font-bold mb-3">Projects</h1>
         <p className="mt-2 text-gray-700 text-justify sm:text-center text-base leading-relaxed">
-          Here you can explore the projects we are working on. Click a project to expand its description.
+          Page under development.
         </p>
       </section>
 
