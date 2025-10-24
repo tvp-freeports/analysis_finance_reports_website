@@ -1,10 +1,8 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import { ToolSection } from "../components/features/ToolSection";
-import type { ElementCollapsableListInfos } from "../components/features/collapsable";
+import { ToolSection, type Tool } from "../components/features/ToolSection";
 
-/** Example data with background colors */
-const TOOLS: ElementCollapsableListInfos[] = [
+const TOOLS: Tool[] = [
   {
     id: "tool-1",
     title: "Impact Drive",

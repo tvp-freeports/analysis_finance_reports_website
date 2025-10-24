@@ -1,11 +1,7 @@
 import React from "react";
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import {
-  ProjectSection,
-  type Project,
-  CardState,
-} from "../components/features/ProjectSection";
+import { ProjectSection, type Project, CardState } from "../components/features/ProjectSection";
 
 // ✅ 6 projects with last 3 reusing IDs of first 3
 const PROJECTS: Project[] = [

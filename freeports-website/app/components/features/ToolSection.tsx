@@ -1,8 +1,16 @@
 import React from "react";
-import type { ElementCollapsableListInfos } from "./features/collapsable";
+
+export type Tool = {
+  id: string;
+  title: string;
+  fullDescription: string;
+  bgColor: string;
+  textColor: string;
+  href?: string;
+};
 
 interface ToolSectionProps {
-  tool: ElementCollapsableListInfos;
+  tool: Tool;
 }
 
 const hoverBgMap: Record<string, string> = {
@@ -33,7 +41,4 @@ export function ToolSection({ tool }: ToolSectionProps) {
     </a>
   );
 }
-
-
-
 
