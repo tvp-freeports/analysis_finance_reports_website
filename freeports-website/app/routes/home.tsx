@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
+import { BlackSection } from "../components/ui/BlackSection"
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -37,7 +38,7 @@ export default function Home() {
       </section>
 
       {/* Dark rectangular card section */}
-      <section className="tongue-content">
+      <BlackSection>
         <h2>
           Transparency requires <span className="line-through decoration-3">4ccess1b1l1ty</span>
         </h2>
@@ -60,7 +61,7 @@ export default function Home() {
           restraining its diffusion and compromising people’s ability to
           make informed decisions.
         </p>
-      </section>
+      </BlackSection>
 
       {/* Regular content section */}
       <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-6 mt-6">

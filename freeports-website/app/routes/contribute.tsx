@@ -1,5 +1,7 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
+import { BlackSection } from "../components/ui/BlackSection";
+
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -49,7 +51,7 @@ export default function Contribute() {
         </p>
       </section>
     {/* Dark card for intro */}
-      <section className="tongue-content">
+      <BlackSection>
         <h2>Ethics</h2>
         <p>
           Given the ethical foundation of this project, we uphold the core
@@ -62,7 +64,7 @@ export default function Contribute() {
           data — whether economic, social, or otherwise — through an open,
           independent, and pragmatic approach.
         </p>
-      </section>
+      </BlackSection>
     </Page>
   );
 }

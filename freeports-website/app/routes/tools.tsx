@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import { ToolSection } from "../components/ToolSection";
-import type { ElementCollapsableListInfos } from "../components/lists/collapsable";
+import { ToolSection } from "../components/features/ToolSection";
+import type { ElementCollapsableListInfos } from "../components/features/collapsable";
 
 /** Example data with background colors */
 const TOOLS: ElementCollapsableListInfos[] = [

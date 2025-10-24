@@ -5,7 +5,7 @@ import {
   ProjectSection,
   type Project,
   CardState,
-} from "../components/ProjectSection";
+} from "../components/features/ProjectSection";
 
 // ✅ 6 projects with last 3 reusing IDs of first 3
 const PROJECTS: Project[] = [

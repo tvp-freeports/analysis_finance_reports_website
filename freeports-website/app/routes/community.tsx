@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
+import { BlackSection } from "../components/ui/BlackSection"
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -40,7 +41,7 @@ export default function Community() {
       </section>
 
       {/* Dark card */}
-      <section className="tongue-content">
+      <BlackSection>
         <h2>Code of conduct</h2>
         <p>
           Nobody is perfect — not me, not you, not them. Collaboration can be
@@ -61,7 +62,7 @@ export default function Community() {
           others. If you ever witness or experience uncomfortable dynamics, we
           encourage you to report them.
         </p>
-      </section>
+      </BlackSection>
     </Page>
   );
 }

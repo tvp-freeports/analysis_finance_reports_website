@@ -1,5 +1,5 @@
 import React from "react";
-import type { ElementCollapsableListInfos } from "./lists/collapsable";
+import type { ElementCollapsableListInfos } from "./features/collapsable";
 
 interface ToolSectionProps {
   tool: ElementCollapsableListInfos;
