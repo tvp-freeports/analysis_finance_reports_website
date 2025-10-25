@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
 import { BlackSection } from "../components/ui/BlackSection"
+import { BaseCard } from "../components/ui/Card";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -17,6 +18,13 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export default function Home() {
+  
+  const demoCard = {
+  id: "example",
+  title: "Demo",
+  fullDescription: "Just testing",
+};
+
   return (
     <Page>
       {/* Intro block */}
@@ -85,7 +93,13 @@ export default function Home() {
           — there’s much work yet to be done.
         </p>
       </section>
-    </Page>
+
+  <BaseCard card={demoCard} isClickable={true}>
+        <h2 className="font-bold">{demoCard.title}</h2>
+        <p>{demoCard.fullDescription}</p>
+  </BaseCard>
+
+</Page>
   );
 }
 

@@ -1,8 +1,9 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import { ToolSection, type Tool } from "../components/features/ToolSection";
+import { ToolsCard } from "../components/ui/ToolsCard";
+import type { CardInfo } from "../components/ui/Card";
 
-const TOOLS: Tool[] = [
+const TOOLS: CardInfo[] = [
   {
     id: "tool-1",
     title: "Impact Drive",
@@ -15,10 +16,7 @@ const TOOLS: Tool[] = [
       responsibility implications when institutions are found
       facilitating human rights violations and fuelling 
       climate destruction.`,
-    bgColor: "bg-[#030712]",
-    textColor: "text-white",
-    href: ""
-    
+    href: ""  
   },
   {
     id: "tool-2",
@@ -28,8 +26,6 @@ const TOOLS: Tool[] = [
       documents from corporate websites and regulatory 
       authorities,  to parse the heterogenous pdf we 
       encounter and return structured datasets.`,
-    bgColor: "bg-[#030712]",
-    textColor: "text-white",
     href: "https://github.com/tvp-freeports"
   },
   {
@@ -37,8 +33,6 @@ const TOOLS: Tool[] = [
     title: "Portlight Analytics",
     fullDescription:
       `ts`,
-    bgColor: "bg-[#030712]",
-    textColor: "text-white",
     href: ""
   },
 ];
@@ -86,7 +80,7 @@ export default function ToolsPage() {
       {/* Tools list */}
       <div className="col-span-full col-start-1 w-full flex flex-col items-center space-y-6 pb-12">
         {TOOLS.map((tool) => (
-          <ToolSection key={tool.id} tool={tool} />
+          <ToolsCard key={tool.id} card={tool} />
         ))}
       </div>
     </Page>

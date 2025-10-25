@@ -1,4 +1,6 @@
 import React from "react";
+import type { CardInfo } from "./Card";
+import { BaseCard, toCssColorFromBgClass } from "./Card"; // ✅ use BaseCard
 import { Button } from "../ui/Button";
 
 export enum CardState {
@@ -7,41 +9,31 @@ export enum CardState {
   Collapsed,
 }
 
-export interface Project {
-  id: string;
-  title: string;
-  shortDescription: string;
-  fullDescription?: string;
-  href?: string;
-  bgColor?: string;
-  textColor?: string;
-}
-
-interface ProjectSectionProps {
-  project: Project;
+interface ProjectCardProps {
+  card: CardInfo;
   state: CardState;
   onClick: () => void;
 }
 
 const expandedBgColorMap: Record<string, string> = {
   "project-1a": "#fc3284",
-  "project-2a": "#f9be2d",
-  "project-3a": "#d422ff",
+  "project-2a": "#d422ff",
+  "project-3a": "#f9be2d",
 };
 
-export function ProjectSection({
-  project,
-  state,
-  onClick,
-}: ProjectSectionProps) {
-  const collapsedBgColor = "#030712";
-  const expandedBgColor = expandedBgColorMap[project.id];
+export function ProjectsCard({ card, state, onClick }: ProjectCardProps) {
+  const expandedBgColor = expandedBgColorMap[card.id];
+  const baseBgColor = toCssColorFromBgClass(card.bgColor ?? "bg-[#030712]", "#030712");
   const isExpanded = state === CardState.Expanded;
 
-  const textClass = project.textColor ?? "text-white";
-
   return (
-    <section
+    <BaseCard
+      card={card}
+      isClickable={true}
+      role="button"
+      tabIndex={0}
+      aria-expanded={isExpanded}
+      aria-controls={`project-${card.id}`}
       onClick={onClick}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -49,19 +41,6 @@ export function ProjectSection({
           onClick();
         }
       }}
-      role="button"
-      tabIndex={0}
-      aria-expanded={isExpanded}
-      aria-controls={`project-${project.id}`}
-      style={{
-        backgroundColor: isExpanded ? expandedBgColor : collapsedBgColor,
-        transition: "background-color 0.3s ease",
-      }}
-      className={`
-        col-span-full col-start-1 w-full max-w-2xl mx-auto mb-6
-        p-6 shadow-sm rounded-none cursor-pointer
-        ${textClass}
-      `}
       onMouseEnter={(e) => {
         if (!isExpanded && expandedBgColor) {
           (e.currentTarget as HTMLElement).style.backgroundColor = expandedBgColor;
@@ -69,22 +48,26 @@ export function ProjectSection({
       }}
       onMouseLeave={(e) => {
         if (!isExpanded) {
-          (e.currentTarget as HTMLElement).style.backgroundColor = collapsedBgColor;
+          (e.currentTarget as HTMLElement).style.backgroundColor = baseBgColor;
         }
       }}
+      style={{
+        backgroundColor: isExpanded ? expandedBgColor : baseBgColor,
+      }}
+      className="col-span-full col-start-1 w-full max-w-2xl mx-auto mb-6"
     >
       {/* Header */}
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          <div className="text-2xl font-bold mb-2">{project.title}</div>
+          <div className="text-2xl font-bold mb-2">{card.title}</div>
           <div className="text-base opacity-90 text-justify [text-justify:inter-word]">
-            {project.shortDescription}
+            {card.shortDescription}
           </div>
         </div>
 
-        {project.href && (
+        {card.href && (
           <a
-            href={project.href}
+            href={card.href}
             className="text-sm underline ml-4 flex-shrink-0"
             onClick={(e) => e.stopPropagation()}
           >
@@ -95,27 +78,26 @@ export function ProjectSection({
 
       {/* Expandable content */}
       <div
-        id={`project-${project.id}`}
+        id={`project-${card.id}`}
         className={`mt-4 overflow-hidden transition-[max-height] duration-300 ease-in-out ${
           isExpanded ? "max-h-[2000px]" : "max-h-0"
         }`}
         aria-hidden={!isExpanded}
       >
-        {/* flex-col with justify-between ensures button stays at bottom */}
         <div className="relative flex flex-col h-full justify-between pr-2 pb-4">
           <div>
             <p className="text-base text-justify [text-justify:inter-word]">
-              {project.fullDescription ?? project.shortDescription}
+              {card.fullDescription ?? card.shortDescription}
             </p>
           </div>
 
-          {/* ✅ Clickable button fixed at bottom of parent container */}
+          {/* ✅ Button stays fixed at bottom */}
           <div className="flex justify-end mt-4">
             <a href="#" onClick={(e) => e.stopPropagation()}>
               <Button
                 label="Read More"
                 style={{
-                  color: expandedBgColor ?? "#000", // text matches card bg
+                  color: expandedBgColor ?? "#000",
                 }}
                 className="bg-white px-6 py-3 rounded-full"
               />
@@ -123,11 +105,6 @@ export function ProjectSection({
           </div>
         </div>
       </div>
-    </section>
+    </BaseCard>
   );
 }
-
-
-
-
-
