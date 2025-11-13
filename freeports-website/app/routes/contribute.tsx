@@ -1,7 +1,6 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import { BlackSection } from "../components/ui/BlackSection";
-
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -21,50 +20,42 @@ export default function Contribute() {
   return (
     <Page>
       {/* Regular content */}
-      <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-12 mt-12">
+      <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto">
         <h2 className="text-left text-xl font-semibold mb-3">How to contribute</h2>
         <p className="text-gray-700 text-justify leading-relaxed">
-          We’re balancing structure with accessibility — ensuring contribution
-          remains simple, collaborative, and enjoyable. You can reach out to us
-          via email or your preferred channel for guidance.
-          <br />
-          <br />
-          Documentation is available at{" "}
-          <strong>
-            <a
-              href="https://docs.freeports.org"
-              className="underline text-blue-400"
-            >
-              docs.freeports.org
-            </a>
-          </strong>{" "}
-          and specifically in the{" "}
-          <strong>
-            <a
-              href="https://docs.freeports.org/contribute.html"
-              className="underline text-blue-400"
-            >
-              contribute section
-            </a>
-          </strong>
-          . Everything is a work in progress — feel free to help improve it.
+          You can join Freeports' <Link to="/" className="text-link-black">mission</Link> by either collaborating 
+          with the team or partnering in a joint project.
         </p>
       </section>
-    {/* Dark card for intro */}
-      <BlackSection>
-        <h2>Ethics</h2>
-        <p>
-          Given the ethical foundation of this project, we uphold the core
-          principles of free software philosophy. We believe that personal
-          freedom begins with the free availability of information and
-          knowledge.
-          <br />
-          <br />
-          Our goal is to remove discriminatory barriers to accessing and using
-          data — whether economic, social, or otherwise — through an open,
-          independent, and pragmatic approach.
+      <section className="black-section">
+        <h2>Join the team</h2>
+        <p> The team members:
+          <ul className="list-disc list-inside space-y-2 my-4">
+            <li> Seek for <Link to="https://drive.google.com/drive/folders/1L-mg5ABCFp8je5hhavW9WR8VK-OGqsTn?hl=it" className="text-link-ice">sources</Link> highlighting corporations' linkages
+              with human rights violations and environmental harm;
+            </li>
+            <li><Link to="https://drive.google.com/drive/folders/1L-mg5ABCFp8je5hhavW9WR8VK-OGqsTn?hl=it" className="text-link-red">Research</Link> on transparency laws to identify where data on the social
+              impact of commercial and financial activities is located and collect the 
+              associated documents;</li>
+            <li><Link to="https://github.com/tvp-freeports/analysis_finance_reports" className="text-link-violet">Develop</Link> the Freeports open-source software, designed to parse heterogeneous PDF files
+               and return structured datasets containing the metadata of interest;</li>
+            <li> <Link to="https://github.com/tvp-freeports/data_queries_demo" className="text-link-orange">Elaborate</Link> the extracted datasets into ESG metrics, statistics, visual analyses, and interactive applications.</li>
+            <li> Promote Freeports' mission via improving its <Link to="https://github.com/tvp-freeports/analysis_finance_reports_website" className="text-link-ice">website</Link>, maintaining social networks and looking for new partnerships.
+            </li>
+          </ul>
+          If any of these roles resonate with the way you would like to contribute to the mission,
+          or have other ideas, you are very welcome to <Link to="/contact-us" className="text-link-ice">contact us</Link>.
         </p>
-      </BlackSection>
+      </section>
+      <section>
+        <h2>Become a partner</h2>
+        <p> We are currently collaborating with an italian journal to 
+          conclude our first <Link to="/projects" className="text-link-black">project</Link> aimed at
+          revealing the exposure of European investment funds in companies that contribute
+          to the illegal expansion of Israeli colonies in Palestinian territories.
+          Together with the journal, we are looking for new partners to scale the project to a global level. It would be precious
+          to <Link to="/contact-us" className="text-link-black">hear from you</Link> joining forces for a mission of transparency that can no longer wait.</p>
+      </section>
     </Page>
   );
 }

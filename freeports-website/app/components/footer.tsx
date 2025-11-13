@@ -18,7 +18,7 @@ export default function Footer() {
         <li>
           <a href="https://github.com/tvp-freeports/analysis_finance_reports" target="_blank" rel="noopener noreferrer">
             <img
-              className="w-20"
+              className="w-16"
               src="assets/github-logo/github-mark.svg"
               alt="GitHub"
             />
@@ -27,7 +27,7 @@ export default function Footer() {
         <li>
           <a href="https://github.com/tvp-freeports/analysis_finance_reports" target="_blank" rel="noopener noreferrer">
             <img
-              className="w-20"
+              className="w-16"
               src="assets/telegram-logo.svg"
               alt="Telegram"
             />
@@ -36,7 +36,7 @@ export default function Footer() {
         <li>
           <a href="https://discord.gg/FRcSBWtcDR" target="_blank" rel="noopener noreferrer">
             <img
-              className="w-20"
+              className="w-16"
               src="assets/discord-logo.svg"
               alt="Discord"
             />

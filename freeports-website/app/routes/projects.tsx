@@ -1,43 +1,21 @@
 import React from "react";
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import { ProjectsCard, CardState } from "../components/ui/ProjectsCard";
+import { ProjectCard, CardState } from "../components/ui/ProjectCard";
 import type { CardInfo } from "../components/ui/Card";
 
 const PROJECTS: CardInfo[] = [
   {
     id: "project-1a",
-    title: "Project 1",
-    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
-    fullDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
-  },
-  {
-    id: "project-2a",
-    title: "Project 2",
-    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
-    fullDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",  },
-  {
-    id: "project-3a",
-    title: "Project 3",
-    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
-    fullDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",  },
-  {
-    id: "project-1a",
-    title: "Project 4",
-    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
-    fullDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",  },
-  {
-    id: "project-2a",
-    title: "Project 5",
-    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
-    fullDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
-  },
-  {
-    id: "project-3a",
-    title: "Project 6s",
-    shortDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
-    fullDescription:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
-  },
+    title: "Reports on the Israeli Occupation",
+    fullDescription: `Freeports is currently collaborating with an Italian journal to
+    reveal data on the exposure of hundreds of investment funds, owned by major Italian 
+    banking groups, towards companies that have been identified as contributing to the Israeli
+    occupation of Palestinian territories. 
+    The next step is to scale the analysis to cover
+    as many worldwide investment funds as possible.`,
+    href: ""
+  }
 ];
 
 export function meta({}: Route.MetaArgs) {
@@ -78,16 +56,16 @@ export default function Projects() {
 
   return (
     <Page>
-      <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8 mt-12">
-        <h1 className="text-xl font-bold mb-3">Projects</h1>
-        <p className="mt-2 text-gray-700 text-justify sm:text-center text-base leading-relaxed">
-          Page under development.
+      <section className="col-start-2 col-span-3 mx-0 justify-self-start !mt-10 !mb-2">
+        <h1>Projects</h1>
+        <p>
+        Following the list of projects we are focusing on.
         </p>
       </section>
 
-      <div className="col-span-full col-start-1 w-full flex flex-col items-center space-y-6 pb-12">
+      <div className="col-start-2 col-span-3 w-full flex flex-col items-center justify-self-start mx-0">
         {PROJECTS.map((project, i) => (
-          <ProjectsCard
+          <ProjectCard
             key={`${project.id}-${i}`} // still unique because we append index
             card={project}
             state={states[i]}

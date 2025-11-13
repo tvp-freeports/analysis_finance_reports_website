@@ -1,40 +1,39 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import { ToolsCard } from "../components/ui/ToolsCard";
+import { ToolCard } from "../components/ui/ToolCard";
 import type { CardInfo } from "../components/ui/Card";
 
 const TOOLS: CardInfo[] = [
   {
     id: "tool-1",
-    title: "Impact Drive",
+    title: "Portlight views",
     fullDescription:
-      `The open-access workspace where we conduct the 
-      economic and legal research needed to track corporate
-      structures, identify where public information on the 
-      social impact of consumption and investment products 
-      is located, and report on the corporate social 
-      responsibility implications when institutions are found
-      facilitating human rights violations and fuelling 
-      climate destruction.`,
-    href: ""  
+      `The open-access data visualisation platform where civil society
+      can learn about and compare financial institutions' investments
+      in companies linked to human and environmental rights violations.`,
+    href: "https://portlight-demo.streamlit.app/"
   },
   {
     id: "tool-2",
-    title: "Freeports Software",
+    title: "Freeports software",
     fullDescription:
-      `The open-source software we use to collect the 
-      documents from corporate websites and regulatory 
-      authorities,  to parse the heterogenous pdf we 
-      encounter and return structured datasets.`,
-    href: "https://github.com/tvp-freeports"
+      `The open-source software that  journalists, researchers and app
+      developers can use to parse financial
+      institutions' pdf disclosures on portfolio holdings returning structured datasets
+      that can be elaborated to fit countless ideas.
+      `,
+    href: "https://docs.freeports.org/en/stable/index.html#"
   },
   {
     id: "tool-3",
-    title: "Portlight Analytics",
+    title: "Dock drive",
     fullDescription:
-      `ts`,
-    href: ""
-  },
+      `The open-access workspace where we develop the methods to identify
+      controversial companies, track corporate
+      structures, find and combine public information on portfolio holdings, build ESG metrics, and outline the legal implications
+      stemming from investing in controversial companies.`,
+    href: "https://drive.google.com/drive/folders/1L-mg5ABCFp8je5hhavW9WR8VK-OGqsTn?hl=it"  
+  }
 ];
 
 export function meta({}: Route.MetaArgs) {
@@ -57,30 +56,18 @@ export const links: Route.LinksFunction = () => [
 export default function ToolsPage() {
   return (
     <Page>
-      {/* Intro block */}
-      <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-8 mt-12">
-        <h1 className="font-bold mb-3">Resources</h1>
-        <p className="mt-2 text-gray-700 text-justify sm:text-center leading-relaxed">
-         Following, the toolkit we have  developed so far to foster transparency 
+      <section>
+        <h1>Resources</h1>
+        <p>
+         Following, the resources we are developing and sharing
+         with everyone to promote transparency 
          on the social and environmental impact of financial and consumption products.
-         <br /><br /> 
-         As of yet, these resources are ready to be combined to 
-         assess only some categories of financial institutions: open-end
-         investment funds and pension funds.
-         Thanks to the exceptionally strong transparency regulation 
-         mandating the periodical publication of their portfolio
-         holdings, one would only need to gather these 
-         disclosures from the managers' websites, use the Freeports 
-         open-source software to turn the pdf files into structured 
-         datasets, and elaborate the results as wished for 
-         personal or public use.      
         </p>
       </section>
 
-      {/* Tools list */}
-      <div className="col-span-full col-start-1 w-full flex flex-col items-center space-y-6 pb-12">
+      <div className="col-start-2 col-span-3 flex flex-col items-center justify-self-start w-full max-w-4xl">
         {TOOLS.map((tool) => (
-          <ToolsCard key={tool.id} card={tool} />
+          <ToolCard key={tool.id} card={tool} />
         ))}
       </div>
     </Page>

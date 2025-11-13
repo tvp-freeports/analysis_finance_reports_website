@@ -8,12 +8,12 @@ interface ToolCardProps {
 }
 
 const hoverBgMap: Record<string, string> = {
-  "tool-1": "#fc3284",
+  "tool-1": "#f9be2d",
   "tool-2": "#d422ff",
-  "tool-3": "#f9be2d",
+  "tool-3": "#fc3284",
 };
 
-export function ToolsCard({ card }: ToolCardProps) {
+export function ToolCard({ card }: ToolCardProps) {
 
   const bgClass = getBgClass(card);
   const baseCssColor = toCssColorFromBgClass(bgClass, "");

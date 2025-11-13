@@ -11,9 +11,9 @@ export type CardInfo = {
 }
 
 export const DEFAULT_BG_CLASS = "bg-[#030712]"; // dark background
-export const DEFAULT_TEXT_CLASS = "text-white"; // white text
+export const DEFAULT_TEXT_CLASS = "text-white"; 
 export const BASE_CARD_CLASSES =
-  "flex flex-col w-full max-w-2xl p-6 shadow-sm rounded-none transition";
+  "flex flex-col w-full max-w-2xl p-6 shadow-sm rounded-none transition-colors duration-300 ease-in-out";
 
 export function getBgClass(card: CardInfo): string {
   return card.bgColor ?? DEFAULT_BG_CLASS;
@@ -46,7 +46,6 @@ export function BaseCard({
   return (
     <section
       className={`${BASE_CARD_CLASSES} ${bgClass} ${textClass} ${className} ${isClickable ? "cursor-pointer" : "cursor-default"}`}
-      style={{ transition: "background-color 0.5s ease-in-out" }}
       {...props}
     >
       {children}

@@ -1,7 +1,6 @@
 import React from "react";
 import type { CardInfo } from "./Card";
-import { BaseCard, toCssColorFromBgClass } from "./Card"; // ✅ use BaseCard
-import { Button } from "../ui/Button";
+import { BaseCard, toCssColorFromBgClass } from "./Card";
 
 export enum CardState {
   Default,
@@ -21,7 +20,7 @@ const expandedBgColorMap: Record<string, string> = {
   "project-3a": "#f9be2d",
 };
 
-export function ProjectsCard({ card, state, onClick }: ProjectCardProps) {
+export function ProjectCard({ card, state, onClick }: ProjectCardProps) {
   const expandedBgColor = expandedBgColorMap[card.id];
   const baseBgColor = toCssColorFromBgClass(card.bgColor ?? "bg-[#030712]", "#030712");
   const isExpanded = state === CardState.Expanded;
@@ -64,16 +63,6 @@ export function ProjectsCard({ card, state, onClick }: ProjectCardProps) {
             {card.shortDescription}
           </div>
         </div>
-
-        {card.href && (
-          <a
-            href={card.href}
-            className="text-sm underline ml-4 flex-shrink-0"
-            onClick={(e) => e.stopPropagation()}
-          >
-            Open project page
-          </a>
-        )}
       </div>
 
       {/* Expandable content */}
@@ -91,17 +80,17 @@ export function ProjectsCard({ card, state, onClick }: ProjectCardProps) {
             </p>
           </div>
 
-          {/* ✅ Button stays fixed at bottom */}
+          {/*Button container*/}
           <div className="flex justify-end mt-4">
-            <a href="#" onClick={(e) => e.stopPropagation()}>
-              <Button
-                label="Read More"
-                style={{
-                  color: expandedBgColor ?? "#000",
-                }}
-                className="bg-white px-6 py-3 rounded-full"
-              />
+            <a
+              href={card.href ?? "#"}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white px-6 py-3 rounded-full font-semibold hover:brightness-95 transition-all duration-200"
+              style={{ color: expandedBgColor ?? "#000" }}
+            >
+              Read More
             </a>
+
           </div>
         </div>
       </div>

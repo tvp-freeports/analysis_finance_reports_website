@@ -2,8 +2,8 @@ import { NavLink } from "react-router";
 
 export default function Header() {
   return (
-    <header className="w-full flex flex-col bg-purple items-center py-4">
-      {/* Desktop logo (clickable) */}
+    <header className="w-full flex flex-col bg-black items-center py-4">
+      
       <div to="/" className="hidden sm:block">
         <img
           alt="Desktop version of Freeports fabulous logo"
@@ -12,7 +12,6 @@ export default function Header() {
         />
       </div>
 
-      {/* Mobile logo (clickable) */}
       <div to="/" className="sm:hidden">
         <img
           alt="Mobile version of Freeports fabulous logo"
@@ -21,7 +20,6 @@ export default function Header() {
         />
       </div>
 
-      {/* Navigation */}
       <nav className="mt-2 w-full flex justify-center">
         <ul className="flex flex-wrap justify-between w-4/5 gap-x-4 gap-y-2">
           {[

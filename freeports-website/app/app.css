@@ -4,37 +4,74 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --text-base: 1.3rem;
-  --color-purple: #000000;
-  --color-purple-drk: #000000;
-  --color-orange: #f9be2d;
-  --color-orange-drk: #000000;
-  --color-white: #f0faff;
-  --color-red: #fc3284;
   --color-black: #000000;
+  --color-red: #fc3284;
+  --color-violet: #d422ff;
+  --color-orange: #f9be2d;
+  --color-ice: #f0faff;
 }
 
 html,
 body {
-  @apply bg-white text-black dark:bg-gray-950 dark:text-white h-fit;
+  @apply bg-ice text-black dark:bg-gray-950 dark:text-white h-fit;
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
 }
 
 h1, h2 {
-  @apply font-bold text-2xl sm:text-2xl mb-1;
+  @apply font-bold text-2xl mb-1;
 }
 
 body {
-  @apply flex flex-col items-center gap-7 text-base sm:text-lg;
+  @apply flex flex-col gap-5 text-base sm:text-lg;
 }
 
 p {
-  @apply text-justify;
+  @apply leading-relaxed;
+  hyphens: auto;
+}
+
+@media (max-width: 640px) {
+  p {
+    @apply text-left;
+  }
+}
+
+.text-link-orange {
+  @apply font-normal text-inherit underline decoration-[var(--color-orange)] underline-offset-2;
+}
+
+.text-link-red {
+  @apply font-normal text-inherit underline decoration-[var(--color-red)] underline-offset-2;
+}
+
+.text-link-violet {
+  @apply font-normal text-inherit underline decoration-[var(--color-violet)] underline-offset-2;
+}
+
+.text-link-black {
+  @apply font-normal text-inherit underline decoration-[var(--color-black)] underline-offset-2;
+}
+
+.text-link-ice {
+  @apply font-normal text-inherit underline decoration-[var(--color-ice)] underline-offset-2;
 }
 
 section {
-  @apply col-start-2 col-span-3 flex flex-col gap-8;
+  @apply col-start-2 col-span-3 flex flex-col gap-6 my-2 max-w-4xl w-full justify-self-start;
+}
+
+main > section:first-of-type {
+  @apply mt-10;
+}
+
+main > section:last-of-type {
+  @apply mb-10;
+}
+
+.black-section {
+  @apply bg-black text-white py-4 px-4 shadow-lg;
 }
 
 .navigation-link-header {

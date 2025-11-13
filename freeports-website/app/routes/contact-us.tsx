@@ -1,6 +1,5 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-// import { Footer } from "../components/footer"
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -17,20 +16,23 @@ export const links: Route.LinksFunction = () => [
 
 export default function Contact_us() {
   return <Page>
-      <section className="mt-14 start-col-1 font-bold border-#030712 border-5 p-9">
-        <address className="not-italic">
-          <ul className="flex flex-col gap-4 ">
-            <li className="flex flex-row gap-9">
-                <p className="flex-grow">Email: </p> <a className="lg:w-3/10 hover:text-purple-drk active:text-purple overflow-scroll" href="mailto:info@freeports.org">info@freeports.org</a>
-            </li>
-            <li className="flex flex-row gap-9">
-                <p className="flex-grow">Tel: </p> <a className="lg:w-3/10 hover:text-purple-drk active:text-purple overflow-scroll" href="tel:+39123456789">+39 123456789</a>
-            </li>
-            <li className="flex flex-row gap-9">
-                <p className="flex-grow">Telegram: </p> <a className="lg:w-3/10 hover:text-purple-drk active:text-purple overflow-scroll" href="https://t.me/TheFreeportsProject">@TheFreeportsProject</a>
-            </li>
-          </ul>
-        </address>
-      </section>
+    <section className="border-[5px] border-[#030712] p-9">
+      <address className="not-italic">
+        <ul className="flex flex-col gap-4">
+          <li className="flex gap-9">
+            <p className="font-bold flex-grow">Email:</p>
+            <a className="lg:w-3/12" href="mailto:info@freeports.org">info@freeports.org</a>
+          </li>
+          <li className="flex gap-9">
+            <p className="font-bold flex-grow">Tel:</p>
+            <a className="lg:w-3/12" href="tel:+39123456789">+39 123456789</a>
+          </li>
+          <li className="flex gap-9">
+            <p className="font-bold flex-grow">Telegram:</p>
+            <a className="lg:w-3/12" href="https://t.me/TheFreeportsProject">@Freeports</a>
+          </li>
+        </ul>
+      </address>
+    </section>
     </Page>;
 }

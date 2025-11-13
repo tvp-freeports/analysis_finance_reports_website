@@ -1,6 +1,6 @@
 import type { Route } from "./+types/home";
 import Page from "../components/page";
-import { BlackSection } from "../components/ui/BlackSection"
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -19,29 +19,29 @@ export const links: Route.LinksFunction = () => [
 export default function Community() {
   return (
     <Page>
-      <section className="col-span-full col-start-1 w-full max-w-4xl mx-auto mb-12 mt-12">
-        <h2 className="text-left text-xl font-semibold mb-3">Join the adventure</h2>
+      <section className="col-span-full col-start-1 w-full max-w-4xl mx-autos">
+        <h2 className="text-left text-xl font-semibold mb-3">Community</h2>
         <p className="text-gray-700 text-justify leading-relaxed">
           Being part of a collaborative project is always enriching. We believe
-          the success of <em>Freeports</em> is bound to the health and growth of
-          its community. To facilitate this, we provide a{" "}
-          <strong>
-            <a href="https://t.me/TheFreeportsProject" className="underline">
-              Telegram group
-            </a>
-          </strong>{" "}
-          and a{" "}
-          <strong>
-            <a href="https://discord.gg/FRcSBWtcDR" className="underline">
-              Discord server
-            </a>
-          </strong>
-          .
+          the success of Freeports is bound to the health and growth of
+          its community. To facilitate communication, we provide a <Link to="https://t.me/TheFreeportsProject" className="text-link-black">
+              Telegram group </Link> and a <Link to="https://discord.gg/FRcSBWtcDR" className="text-link-black">
+              Discord server </Link>.
         </p>
       </section>
 
-      {/* Dark card */}
-      <BlackSection>
+      <section className="black-section">
+        <h2>Ethics</h2>
+        <p>
+          We do our best trying to eliminate discriminatory factors in the
+          fruition of freeports' resources. Economic and time disposal, direct
+          and indirect racial, gender, religious, political, sexual
+          orientation and age discrimination should never impair anyone from 
+          accessing and contributing to any aspect of the project.
+        </p>
+      </section>
+
+      <section>
         <h2>Code of conduct</h2>
         <p>
           Nobody is perfect — not me, not you, not them. Collaboration can be
@@ -49,20 +49,15 @@ export default function Community() {
           cooperative and respectful environment.
           <br />
           <br />
-          Our specific rules are listed in our{" "}
-          <strong>
-            <a
-              href="https://github.com/tvp-freeports/analysis_finance_reports/blob/main/CODE_OF_CONDUCT.md"
-              className="underline"
+          Our specific rules are listed in our <Link
+              to="https://github.com/tvp-freeports/analysis_finance_reports/blob/main/CODE_OF_CONDUCT.md"
+              className="text-link-black"
             >
-              GitHub repository
-            </a>
-          </strong>
-          . These guidelines are subordinate to the master rule of respect for
+              GitHub repository</Link>. These guidelines are subordinated to the master rule of respect for
           others. If you ever witness or experience uncomfortable dynamics, we
           encourage you to report them.
         </p>
-      </BlackSection>
+      </section>
     </Page>
   );
 }
